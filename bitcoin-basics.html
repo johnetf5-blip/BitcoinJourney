@@ -1,0 +1,151 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>What Is Bitcoin? | Bitcoin Journey</title>
+<style>
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #0b1220;
+  color: #e8edf5;
+  line-height: 1.7;
+}
+header {
+  padding: 22px;
+  text-align: center;
+  background: #111c30;
+  border-bottom: 1px solid #26354d;
+}
+header a { color: #f7931a; text-decoration: none; }
+main { max-width: 850px; margin: auto; padding: 30px 20px; }
+h1, h2 { line-height: 1.25; }
+h1 { color: #f7931a; font-size: 2.2rem; }
+h2 { color: #f7931a; margin-top: 35px; }
+p { color: #cbd5e1; }
+.card {
+  background: #142238;
+  border: 1px solid #293c58;
+  border-radius: 12px;
+  padding: 20px;
+  margin: 20px 0;
+}
+.example { border-left: 4px solid #f7931a; }
+button {
+  background: #f7931a;
+  color: #111827;
+  border: 0;
+  padding: 12px 20px;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+}
+button:hover { background: #ffad42; }
+label { display: block; margin: 12px 0; }
+.result { font-weight: bold; margin-top: 15px; }
+footer { text-align: center; padding: 25px; color: #94a3b8; }
+</style>
+</head>
+<body>
+
+<header>
+  <a href="index.html">← Back to Bitcoin Journey</a>
+</header>
+
+<main>
+  <p>BITCOIN JOURNEY · BEGINNER COURSE · LESSON 1</p>
+  <h1>What Is Bitcoin?</h1>
+  <p>Imagine being able to send money to someone in another country without asking a bank to approve the transaction. Bitcoin was designed to make this possible using a network of computers.</p>
+
+  <div class="card">
+    <h2>The simple definition</h2>
+    <p><strong>Bitcoin is a form of digital money.</strong> It operates on a network of computers around the world. No single company, bank, or government controls the Bitcoin network.</p>
+    <p>People can send and receive bitcoin over the internet, and the network records transactions on a shared public ledger called the blockchain.</p>
+  </div>
+
+  <h2>1. Is Bitcoin physical money?</h2>
+  <p>No. You cannot hold a bitcoin like a £10 banknote or a physical coin. Bitcoin exists digitally.</p>
+  <p>You can use a wallet to manage your bitcoin. A wallet helps you control the keys that authorise spending your bitcoin.</p>
+
+  <div class="card example">
+    <strong>Example</strong>
+    <p>Imagine you want to send £10 worth of bitcoin to a friend. Your wallet creates a transaction. The Bitcoin network checks it, and once confirmed, the transaction is recorded on the blockchain.</p>
+  </div>
+
+  <h2>2. Who controls Bitcoin?</h2>
+  <p>Bitcoin is a decentralised network. This means there is no single central organisation in charge of the entire system.</p>
+  <p>Thousands of independent computers, called nodes, can check that transactions and blocks follow Bitcoin's rules.</p>
+
+  <h2>3. Why is Bitcoin different from ordinary money?</h2>
+  <div class="card">
+    <p><strong>Traditional money:</strong> Most pounds and dollars are issued and managed through central banking systems.</p>
+    <p><strong>Bitcoin:</strong> Its issuance follows rules built into its open-source protocol. Its maximum supply is designed to be 21 million bitcoin.</p>
+  </div>
+
+  <h2>4. Can Bitcoin be sent anywhere?</h2>
+  <p>Bitcoin can be sent across borders using an internet connection. Transactions are processed by the network rather than relying on one bank's payment system.</p>
+  <p>However, transactions are not always instant or free. Network fees and confirmation times can vary.</p>
+
+  <h2>5. Is Bitcoin risk-free?</h2>
+  <p>No. Bitcoin's price can rise and fall significantly. Losing your private keys or falling for a scam can also mean losing access to your bitcoin.</p>
+  <p>Learning how wallets, private keys, and backups work is essential before using Bitcoin.</p>
+
+  <div class="card">
+    <h2>Test your understanding</h2>
+    <p><strong>Question 1:</strong> What is Bitcoin?</p>
+    <label><input type="radio" name="q1" value="a"> A digital money system</label>
+    <label><input type="radio" name="q1" value="b"> A company owned by one bank</label>
+    <label><input type="radio" name="q1" value="c"> A physical gold coin</label>
+
+    <p><strong>Question 2:</strong> What is the maximum supply of bitcoin?</p>
+    <label><input type="radio" name="q2" value="a"> 100 million</label>
+    <label><input type="radio" name="q2" value="b"> 21 million</label>
+    <label><input type="radio" name="q2" value="c"> Unlimited</label>
+
+    <p><strong>Question 3:</strong> What is a Bitcoin node?</p>
+    <label><input type="radio" name="q3" value="a"> A bank account</label>
+    <label><input type="radio" name="q3" value="b"> A physical bitcoin</label>
+    <label><input type="radio" name="q3" value="c"> A computer that checks Bitcoin's rules</label>
+
+    <button onclick="checkQuiz()">Check my answers</button>
+    <p class="result" id="result"></p>
+  </div>
+
+  <div class="card">
+    <h2>What comes next?</h2>
+    <p>In Lesson 2, we'll explore why Bitcoin has a maximum supply of 21 million and how its issuance schedule works.</p>
+  </div>
+</main>
+
+<footer>Bitcoin Journey · Learn at your own pace</footer>
+
+<script>
+function checkQuiz() {
+  const answers = { q1: "a", q2: "b", q3: "c" };
+  let score = 0;
+
+  for (const question in answers) {
+    const selected = document.querySelector(
+      'input[name="' + question + '"]:checked'
+    );
+    if (selected && selected.value === answers[question]) {
+      score++;
+    }
+  }
+
+  const result = document.getElementById("result");
+  result.textContent = "You scored " + score + " out of 3.";
+
+  if (score === 3) {
+    result.textContent += " Excellent work!";
+  } else {
+    result.textContent += " Review the lesson and try again.";
+  }
+}
+</script>
+
+</body>
+</html>
