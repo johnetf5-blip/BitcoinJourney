@@ -1,0 +1,408 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bitcoin Transactions | Bitcoin Journey</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #0b1220;
+            color: #e8edf5;
+            line-height: 1.7;
+        }
+
+        header {
+            padding: 22px 8%;
+            border-bottom: 1px solid #263247;
+        }
+
+        header a {
+            color: #f7931a;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        main {
+            max-width: 850px;
+            margin: 45px auto;
+            padding: 0 22px;
+        }
+
+        .tag {
+            color: #f7931a;
+            font-weight: bold;
+            letter-spacing: 2px;
+        }
+
+        h1, h2 {
+            color: #ffffff;
+            line-height: 1.3;
+        }
+
+        h1 {
+            font-size: 38px;
+        }
+
+        h2 {
+            margin-top: 35px;
+        }
+
+        .intro, .lesson-box, .quiz {
+            background: #151f30;
+            border: 1px solid #29364b;
+            border-radius: 12px;
+            padding: 22px;
+            margin: 22px 0;
+        }
+
+        .orange {
+            color: #f7931a;
+        }
+
+        .example {
+            background: #202d40;
+            padding: 15px;
+            border-left: 4px solid #f7931a;
+            margin: 18px 0;
+        }
+
+        li {
+            margin-bottom: 10px;
+        }
+
+        button {
+            background: #f7931a;
+            color: #111827;
+            border: none;
+            border-radius: 7px;
+            padding: 12px 20px;
+            font-weight: bold;
+            cursor: pointer;
+            margin-top: 12px;
+        }
+
+        button:hover {
+            background: #ffad42;
+        }
+
+        .question {
+            border-bottom: 1px solid #29364b;
+            padding: 15px 0;
+        }
+
+        .question label {
+            display: block;
+            margin: 8px 0;
+            cursor: pointer;
+        }
+
+        #result {
+            font-weight: bold;
+            margin-top: 18px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 30px;
+            color: #9ba9bd;
+            border-top: 1px solid #263247;
+            margin-top: 50px;
+        }
+
+        @media (max-width: 600px) {
+            h1 {
+                font-size: 30px;
+            }
+
+            main {
+                margin-top: 25px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <a href="index.html">← Bitcoin Journey Home</a>
+</header>
+
+<main>
+
+    <p class="tag">BITCOIN EDUCATION — LESSON 6</p>
+
+    <h1>Bitcoin Transactions: <span class="orange">How Money Moves</span></h1>
+
+    <div class="intro">
+        <p>
+            Bitcoin allows people to send value directly across a
+            global network without needing a traditional bank to
+            approve every payment.
+        </p>
+        <p>
+            But what actually happens when you press
+            <strong>Send</strong> in a Bitcoin wallet?
+            Let's follow the journey of a transaction.
+        </p>
+    </div>
+
+    <h2>1. What is a Bitcoin transaction?</h2>
+
+    <p>
+        A Bitcoin transaction is a digital instruction that
+        transfers control of bitcoin from existing transaction
+        outputs to new outputs.
+    </p>
+
+    <p>
+        In simple terms, it tells the Bitcoin network how much
+        bitcoin should be assigned to new owners or destinations.
+    </p>
+
+    <div class="example">
+        <strong>Example:</strong>
+        <p>
+            Imagine Alice wants to send Bob 0.01 BTC.
+            Alice uses her wallet to create a transaction
+            that pays 0.01 BTC to Bob's Bitcoin address.
+        </p>
+    </div>
+
+    <h2>2. How does a wallet create a transaction?</h2>
+
+    <p>A simplified transaction journey looks like this:</p>
+
+    <ol>
+        <li>Alice enters Bob's Bitcoin address.</li>
+        <li>She enters the amount: 0.01 BTC.</li>
+        <li>Her wallet selects available bitcoin from previous transactions.</li>
+        <li>The wallet creates a transaction with the payment details and any change returned to Alice.</li>
+        <li>Alice's wallet uses her private key to digitally sign the transaction.</li>
+        <li>The signed transaction is ready to be shared with the network.</li>
+    </ol>
+
+    <div class="lesson-box">
+        <h3 class="orange">Important: Private keys</h3>
+        <p>
+            A digital signature proves that the transaction is
+            authorised by someone who controls the required
+            private key. The private key itself is not sent
+            across the Bitcoin network.
+        </p>
+    </div>
+
+    <h2>3. What is the mempool?</h2>
+
+    <p>
+        After a wallet broadcasts a transaction, it can reach
+        Bitcoin nodes. Nodes check whether it follows the
+        transaction rules.
+    </p>
+
+    <p>
+        Valid transactions that have not yet been included in a
+        block may be held in a waiting area called the
+        <strong>mempool</strong>.
+    </p>
+
+    <div class="example">
+        Think of the mempool like a waiting room.
+        Transactions are waiting for miners to consider including
+        them in a new block.
+    </div>
+
+    <p>
+        Different nodes can have different mempool contents.
+        A transaction is not guaranteed to be accepted by every
+        node or included in the next block.
+    </p>
+
+    <h2>4. How do miners include transactions?</h2>
+
+    <p>
+        Miners select transactions from their mempool and
+        attempt to include them in a new block.
+    </p>
+
+    <p>
+        They compete using Proof of Work. When a miner finds a
+        valid block, it can be broadcast to the network.
+    </p>
+
+    <p>
+        Other nodes independently check the block and its
+        transactions. If the block follows the consensus rules,
+        nodes can accept it as part of their view of the
+        Bitcoin blockchain.
+    </p>
+
+    <h2>5. What are transaction fees?</h2>
+
+    <p>
+        Bitcoin transactions can include a fee paid to the
+        miner whose block includes the transaction.
+    </p>
+
+    <p>
+        Fees are generally measured in satoshis per virtual byte
+        (sat/vB). The fee rate and the transaction's size help
+        determine the total fee.
+    </p>
+
+    <p>
+        When demand for block space is high, users may compete
+        by offering higher fee rates. When demand is lower,
+        fees may be lower.
+    </p>
+
+    <div class="example">
+        <strong>Remember:</strong>
+        A higher fee rate can make a transaction more attractive
+        to miners, but it does not guarantee immediate confirmation.
+    </div>
+
+    <h2>6. What are confirmations?</h2>
+
+    <p>
+        A confirmation happens when a transaction is included
+        in a block that becomes part of the accepted blockchain.
+    </p>
+
+    <ul>
+        <li><strong>0 confirmations:</strong> The transaction has not yet been included in a confirmed block.</li>
+        <li><strong>1 confirmation:</strong> The transaction is included in one block.</li>
+        <li><strong>2 confirmations:</strong> One more block has been added on top of that block.</li>
+        <li><strong>6 confirmations:</strong> Six blocks have been added, including the block containing the transaction.</li>
+    </ul>
+
+    <p>
+        More confirmations generally make it increasingly difficult
+        to reorganise the blockchain and remove that transaction.
+        The appropriate number depends on the value and risk of
+        the payment.
+    </p>
+
+    <h2>7. Follow the journey of a Bitcoin payment</h2>
+
+    <div class="lesson-box">
+        <ol>
+            <li><strong>Wallet:</strong> Creates and signs the transaction.</li>
+            <li><strong>Network:</strong> Shares the transaction with nodes.</li>
+            <li><strong>Mempool:</strong> Holds eligible unconfirmed transactions.</li>
+            <li><strong>Miner:</strong> May include the transaction in a block.</li>
+            <li><strong>Nodes:</strong> Independently verify the block.</li>
+            <li><strong>Blockchain:</strong> Records the confirmed transaction.</li>
+        </ol>
+    </div>
+
+    <h2>Test your knowledge</h2>
+
+    <div class="quiz">
+
+        <form id="quizForm">
+
+            <div class="question">
+                <strong>1. What does a Bitcoin wallet use to sign a transaction?</strong>
+                <label><input type="radio" name="q1" value="a"> A public address</label>
+                <label><input type="radio" name="q1" value="b"> A private key</label>
+                <label><input type="radio" name="q1" value="c"> A transaction fee</label>
+            </div>
+
+            <div class="question">
+                <strong>2. What is the mempool?</strong>
+                <label><input type="radio" name="q2" value="a"> A waiting area for unconfirmed transactions held by nodes</label>
+                <label><input type="radio" name="q2" value="b"> A Bitcoin wallet</label>
+                <label><input type="radio" name="q2" value="c"> A mining machine</label>
+            </div>
+
+            <div class="question">
+                <strong>3. Who attempts to include transactions in new blocks?</strong>
+                <label><input type="radio" name="q3" value="a"> Banks</label>
+                <label><input type="radio" name="q3" value="b"> Wallet owners</label>
+                <label><input type="radio" name="q3" value="c"> Miners</label>
+            </div>
+
+            <div class="question">
+                <strong>4. What does one confirmation mean?</strong>
+                <label><input type="radio" name="q4" value="a"> The transaction has been included in one block</label>
+                <label><input type="radio" name="q4" value="b"> The transaction has been deleted</label>
+                <label><input type="radio" name="q4" value="c"> The wallet has been closed</label>
+            </div>
+
+            <button type="button" onclick="checkQuiz()">Check my answers</button>
+
+        </form>
+
+        <p id="result"></p>
+
+    </div>
+
+    <div class="lesson-box">
+        <h2 class="orange">Final thought</h2>
+        <p>
+            Bitcoin transactions are more than digital payments.
+            They are verified by a distributed network of
+            independent computers following shared rules.
+        </p>
+        <p>
+            You do not need to trust one bank to maintain the
+            transaction record. You can verify the rules and
+            blockchain history using your own node.
+        </p>
+    </div>
+
+    <p>
+        <a href="index.html" class="orange">← Back to Bitcoin Journey</a>
+    </p>
+
+</main>
+
+<footer>
+    Bitcoin Journey — Learn Bitcoin step by step.
+</footer>
+
+<script>
+    function checkQuiz() {
+
+        const answers = {
+            q1: "b",
+            q2: "a",
+            q3: "c",
+            q4: "a"
+        };
+
+        let score = 0;
+        let total = 4;
+
+        for (let question in answers) {
+            const selected = document.querySelector(
+                'input[name="' + question + '"]:checked'
+            );
+
+            if (selected && selected.value === answers[question]) {
+                score++;
+            }
+        }
+
+        const result = document.getElementById("result");
+
+        if (score === total) {
+            result.textContent = "Excellent! You got all 4 answers correct!";
+        } else {
+            result.textContent =
+                "You scored " + score + " out of " + total +
+                ". Review the lesson and try again!";
+        }
+    }
+</script>
+
+</body>
+</html>
