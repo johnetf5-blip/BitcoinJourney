@@ -1,0 +1,316 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bitcoin Privacy | Bitcoin Journey</title>
+
+<style>
+* { box-sizing: border-box; }
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #0b1220;
+    color: #e8edf5;
+    line-height: 1.7;
+}
+
+header {
+    padding: 22px 8%;
+    border-bottom: 1px solid #263247;
+}
+
+header a, .orange {
+    color: #f7931a;
+}
+
+header a {
+    text-decoration: none;
+    font-weight: bold;
+}
+
+main {
+    max-width: 850px;
+    margin: 45px auto;
+    padding: 0 22px;
+}
+
+.tag {
+    color: #f7931a;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+h1, h2 { color: white; line-height: 1.3; }
+h1 { font-size: 38px; }
+h2 { margin-top: 35px; }
+
+.intro, .lesson-box, .quiz {
+    background: #151f30;
+    border: 1px solid #29364b;
+    border-radius: 12px;
+    padding: 22px;
+    margin: 22px 0;
+}
+
+.example {
+    background: #202d40;
+    padding: 16px;
+    border-left: 4px solid #f7931a;
+    margin: 18px 0;
+}
+
+.steps { padding-left: 25px; }
+.steps li { margin-bottom: 12px; }
+
+.question {
+    border-bottom: 1px solid #29364b;
+    padding: 15px 0;
+}
+
+.question label {
+    display: block;
+    margin: 8px 0;
+    cursor: pointer;
+}
+
+button {
+    background: #f7931a;
+    color: #111827;
+    border: none;
+    border-radius: 7px;
+    padding: 12px 20px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 12px;
+}
+
+button:hover { background: #ffad42; }
+#result { font-weight: bold; margin-top: 18px; }
+
+footer {
+    text-align: center;
+    padding: 30px;
+    color: #9ba9bd;
+    border-top: 1px solid #263247;
+    margin-top: 50px;
+}
+
+@media (max-width: 600px) {
+    h1 { font-size: 30px; }
+    main { margin-top: 25px; }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <a href="index.html">← Bitcoin Journey Home</a>
+</header>
+
+<main>
+
+<p class="tag">BITCOIN EDUCATION — LESSON 10</p>
+
+<h1>Bitcoin Privacy: <span class="orange">What Can the Blockchain Reveal?</span></h1>
+
+<div class="intro">
+    <p>Bitcoin lets people transfer value without needing a bank to approve every payment. But this does not mean Bitcoin transactions are completely private.</p>
+    <p>Bitcoin's blockchain is a public record. Understanding what it reveals can help you protect your financial privacy.</p>
+</div>
+
+<h2>1. Why are Bitcoin transactions public?</h2>
+
+<p>Bitcoin uses a public blockchain. Transactions included in confirmed blocks can be viewed by anyone using a blockchain explorer or their own Bitcoin node.</p>
+
+<p>People can inspect information such as:</p>
+
+<ul>
+    <li>The Bitcoin addresses involved in a transaction.</li>
+    <li>The amounts sent to different outputs.</li>
+    <li>The transaction fee.</li>
+    <li>When the transaction was included in a block.</li>
+    <li>The transaction's relationship to other recorded transactions.</li>
+</ul>
+
+<div class="example">
+    <strong class="orange">Think of it this way</strong>
+    <p>Imagine a public noticeboard recording payments between numbered accounts. Everyone can inspect the records, but the numbers alone do not automatically tell everyone who owns each account.</p>
+</div>
+
+<h2>2. Is Bitcoin anonymous?</h2>
+
+<p>Bitcoin is often described as <strong>pseudonymous</strong>, rather than completely anonymous.</p>
+
+<p>A pseudonym is a name or identifier that does not directly reveal someone's real identity. A Bitcoin address can act as an identifier in this way.</p>
+
+<p>However, information from outside the blockchain can sometimes connect an address to a person.</p>
+
+<p>For example:</p>
+
+<ul>
+    <li>A person publicly posts their receiving address.</li>
+    <li>A payment service associates an address with a verified customer.</li>
+    <li>Someone links a payment to a known purchase or public event.</li>
+</ul>
+
+<p>These connections can reveal more than the blockchain record alone.</p>
+
+<div class="lesson-box">
+    <h3 class="orange">Important lesson</h3>
+    <p>A public address does not automatically reveal your name. But you should not assume that your Bitcoin activity is impossible to trace.</p>
+</div>
+
+<h2>3. How can transactions be linked?</h2>
+
+<p>Bitcoin transactions spend outputs from earlier transactions and create new outputs. This creates a public chain of transaction history.</p>
+
+<p>Researchers and blockchain analysts may use patterns in this history to develop guesses about which addresses are related.</p>
+
+<p>For example, if several payments are made to addresses that an observer already associates with one person, the observer may be able to connect some of those payments.</p>
+
+<p>However, interpreting transaction patterns can be uncertain. A pattern is not always proof of who controls an address.</p>
+
+<h2>4. Why does address reuse matter?</h2>
+
+<p>A wallet may generate multiple receiving addresses. Using a fresh address for different payments can reduce the easy linking of those payments by outside observers.</p>
+
+<p>If you repeatedly publish or use the same address, other people may be able to connect payments to that address more easily.</p>
+
+<div class="example">
+    <strong>Example</strong>
+    <p>Alice shares one Bitcoin address publicly and receives several payments to it. Anyone who finds the address can inspect the payments recorded to it.</p>
+    <p>If Alice uses different receiving addresses, linking her payments may become harder, although it does not guarantee privacy.</p>
+</div>
+
+<h2>5. Does a new address guarantee privacy?</h2>
+
+<p>No. A new address is only one part of privacy protection.</p>
+
+<p>Transactions can reveal relationships through their inputs, outputs and timing. Wallet behaviour, public posts and information from payment services can also create connections.</p>
+
+<p>Even if you use a different address each time, other information may still link your activity together.</p>
+
+<h2>6. Practical ways to protect your privacy</h2>
+
+<ol class="steps">
+    <li><strong>Avoid unnecessary address reuse.</strong> Use the receiving addresses provided by your wallet as appropriate.</li>
+    <li><strong>Be careful when sharing addresses publicly.</strong> A public post can connect an address to your online identity.</li>
+    <li><strong>Protect your personal information.</strong> Avoid publishing details that connect your identity to your transaction history.</li>
+    <li><strong>Understand payment services.</strong> Exchanges and other services may collect identity or transaction information.</li>
+    <li><strong>Keep your devices secure.</strong> Update software and protect your wallet and computer from malware.</li>
+    <li><strong>Learn before using advanced privacy tools.</strong> Understand their limitations and potential risks before relying on them.</li>
+</ol>
+
+<div class="lesson-box">
+    <h3 class="orange">Privacy is not the same as security</h3>
+    <p>Privacy concerns who can learn about your financial activity. Security concerns protecting your bitcoin from theft or unauthorised spending.</p>
+    <p>You need to think about both. A private transaction does not automatically make your wallet secure.</p>
+</div>
+
+<h2>7. Can your own Bitcoin node help?</h2>
+
+<p>Running your own full node allows you to independently verify Bitcoin's blockchain and consensus rules.</p>
+
+<p>Depending on your wallet setup, connecting your wallet to your own node can reduce the information you need to reveal to third-party blockchain services.</p>
+
+<p>However, running a node does not automatically hide every transaction or make your internet connection anonymous. Your wallet software, network setup and online behaviour still matter.</p>
+
+<h2>8. What about Bitcoin explorers?</h2>
+
+<p>A blockchain explorer is a website that lets people inspect public Bitcoin transactions.</p>
+
+<p>Explorers can be useful for checking transaction details, but a third-party website may receive information about the searches you make, including the addresses you look up.</p>
+
+<p>For greater control, you can learn to use your own node and compatible wallet tools. Remember that the public blockchain remains publicly viewable regardless of which explorer you use.</p>
+
+<h2>Test your knowledge</h2>
+
+<div class="quiz">
+<form id="quizForm">
+
+<div class="question">
+<strong>1. Why is Bitcoin described as pseudonymous?</strong>
+<label><input type="radio" name="q1" value="a"> Every address contains the owner's real name.</label>
+<label><input type="radio" name="q1" value="b"> Addresses do not automatically reveal a person's identity.</label>
+<label><input type="radio" name="q1" value="c"> All transactions are secret.</label>
+</div>
+
+<div class="question">
+<strong>2. What information is publicly recorded on the Bitcoin blockchain?</strong>
+<label><input type="radio" name="q2" value="a"> Every user's home address.</label>
+<label><input type="radio" name="q2" value="b"> Every user's password.</label>
+<label><input type="radio" name="q2" value="c"> Confirmed transaction data, including addresses and amounts.</label>
+</div>
+
+<div class="question">
+<strong>3. Why can address reuse affect privacy?</strong>
+<label><input type="radio" name="q3" value="a"> It can make payments easier to link together.</label>
+<label><input type="radio" name="q3" value="b"> It increases Bitcoin's maximum supply.</label>
+<label><input type="radio" name="q3" value="c"> It makes every transaction private.</label>
+</div>
+
+<div class="question">
+<strong>4. Does running your own node guarantee complete anonymity?</strong>
+<label><input type="radio" name="q4" value="a"> Yes, in every situation.</label>
+<label><input type="radio" name="q4" value="b"> No. It helps with independent verification, but does not guarantee anonymity.</label>
+<label><input type="radio" name="q4" value="c"> Yes, because it removes old transactions from the blockchain.</label>
+</div>
+
+<button type="button" onclick="checkQuiz()">Check my answers</button>
+</form>
+
+<p id="result" aria-live="polite"></p>
+</div>
+
+<div class="lesson-box">
+<h2 class="orange">Final thought</h2>
+<p>Bitcoin gives everyone access to a shared public transaction history. That transparency helps anyone verify the system, but it also creates privacy challenges.</p>
+<p>Understand what the blockchain reveals, protect your personal information and remember that no single privacy practice guarantees complete anonymity.</p>
+</div>
+
+<p><a href="index.html" class="orange">← Back to Bitcoin Journey</a></p>
+
+</main>
+
+<footer>
+Bitcoin Journey — Learn Bitcoin step by step.
+</footer>
+
+<script>
+function checkQuiz() {
+    const answers = {
+        q1: "b",
+        q2: "c",
+        q3: "a",
+        q4: "b"
+    };
+
+    let score = 0;
+
+    for (const question in answers) {
+        const selected = document.querySelector(
+            'input[name="' + question + '"]:checked'
+        );
+
+        if (selected && selected.value === answers[question]) {
+            score++;
+        }
+    }
+
+    const result = document.getElementById("result");
+
+    if (score === 4) {
+        result.textContent = "Excellent! You got all 4 answers correct!";
+    } else {
+        result.textContent =
+            "You scored " + score + " out of 4. Review the lesson and try again.";
+    }
+}
+</script>
+
+</body>
+</html>
