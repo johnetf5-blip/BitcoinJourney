@@ -1,0 +1,402 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bitcoin Monetary Policy | Bitcoin Journey</title>
+
+<style>
+* { box-sizing: border-box; }
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #0b1220;
+    color: #e8edf5;
+    line-height: 1.7;
+}
+
+header {
+    padding: 22px 8%;
+    border-bottom: 1px solid #263247;
+}
+
+header a, .orange { color: #f7931a; }
+
+header a {
+    text-decoration: none;
+    font-weight: bold;
+}
+
+main {
+    max-width: 850px;
+    margin: 45px auto;
+    padding: 0 22px;
+}
+
+.tag {
+    color: #f7931a;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+h1, h2 { color: white; line-height: 1.3; }
+h1 { font-size: 38px; }
+h2 { margin-top: 35px; }
+
+.intro, .lesson-box, .quiz {
+    background: #151f30;
+    border: 1px solid #29364b;
+    border-radius: 12px;
+    padding: 22px;
+    margin: 22px 0;
+}
+
+.example {
+    background: #202d40;
+    padding: 16px;
+    border-left: 4px solid #f7931a;
+    margin: 18px 0;
+}
+
+.steps { padding-left: 25px; }
+.steps li { margin-bottom: 12px; }
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 18px 0;
+}
+
+th, td {
+    border: 1px solid #35445a;
+    padding: 12px;
+    text-align: left;
+}
+
+th { color: #f7931a; }
+
+.question {
+    border-bottom: 1px solid #29364b;
+    padding: 15px 0;
+}
+
+.question label {
+    display: block;
+    margin: 8px 0;
+    cursor: pointer;
+}
+
+button {
+    background: #f7931a;
+    color: #111827;
+    border: none;
+    border-radius: 7px;
+    padding: 12px 20px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 12px;
+}
+
+button:hover { background: #ffad42; }
+
+#result {
+    font-weight: bold;
+    margin-top: 18px;
+}
+
+footer {
+    text-align: center;
+    padding: 30px;
+    color: #9ba9bd;
+    border-top: 1px solid #263247;
+    margin-top: 50px;
+}
+
+@media (max-width: 600px) {
+    h1 { font-size: 30px; }
+    main { margin-top: 25px; }
+    th, td { padding: 8px; font-size: 14px; }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <a href="index.html">← Bitcoin Journey Home</a>
+</header>
+
+<main>
+
+<p class="tag">BITCOIN EDUCATION — LESSON 12</p>
+
+<h1>Bitcoin's Monetary Policy: <span class="orange">How New Bitcoin Is Created</span></h1>
+
+<div class="intro">
+    <p>Every monetary system has rules about how money is created and distributed.</p>
+
+    <p>Bitcoin is different because its issuance schedule is written into its protocol. New bitcoin is created according to predictable rules, rather than through decisions made by a central bank.</p>
+
+    <p>In this lesson, we will explore Bitcoin's monetary policy and understand why its supply is limited.</p>
+</div>
+
+<h2>1. What is monetary policy?</h2>
+
+<p>Monetary policy describes the rules and decisions that influence the supply of money and monetary conditions in an economy.</p>
+
+<p>In traditional financial systems, central banks can influence monetary conditions through tools such as interest rates and asset purchases. Governments and banking systems also play important roles in the wider creation of money.</p>
+
+<p>Bitcoin takes a different approach. Its issuance follows rules enforced by the network's participants.</p>
+
+<div class="example">
+    <strong class="orange">The central difference</strong>
+    <p>Traditional monetary systems can change their monetary policies through institutions and legal decisions.</p>
+    <p>Bitcoin's issuance follows its existing protocol rules. Changing those rules would require widespread agreement and adoption by the network's participants.</p>
+</div>
+
+<h2>2. Who creates new bitcoin?</h2>
+
+<p>New bitcoin enters circulation through mining.</p>
+
+<p>When a miner successfully creates a valid block, the block can include a special transaction called the coinbase transaction.</p>
+
+<p>This transaction allows the miner to claim the permitted block subsidy, together with the transaction fees from the transactions included in that block.</p>
+
+<p>The block subsidy is the source of newly issued bitcoin.</p>
+
+<h2>3. What is Bitcoin's maximum supply?</h2>
+
+<p>Bitcoin's monetary policy limits the total supply to approximately 21 million BTC.</p>
+
+<p>This limit is enforced through the consensus rules that full nodes independently verify.</p>
+
+<p>Nodes check that blocks follow the permitted issuance schedule. A block that creates more subsidy than the rules allow is invalid.</p>
+
+<div class="lesson-box">
+    <h3 class="orange">Why does this matter?</h3>
+    <p>No miner can simply decide to create extra bitcoin and force independently validating nodes to accept it.</p>
+    <p>Bitcoin's supply rules are part of the protocol that participants choose to follow.</p>
+</div>
+
+<h2>4. How does the issuance schedule work?</h2>
+
+<p>When Bitcoin started in 2009, the block subsidy was 50 BTC.</p>
+
+<p>After every 210,000 blocks, the subsidy is reduced by half. This event is called the halving.</p>
+
+<p>Because blocks are produced at an average target interval of approximately ten minutes, 210,000 blocks take roughly four years on average.</p>
+
+<table>
+    <tr>
+        <th>Halving</th>
+        <th>Block subsidy</th>
+    </tr>
+    <tr>
+        <td>2009 — Launch</td>
+        <td>50 BTC</td>
+    </tr>
+    <tr>
+        <td>2012 — First</td>
+        <td>25 BTC</td>
+    </tr>
+    <tr>
+        <td>2016 — Second</td>
+        <td>12.5 BTC</td>
+    </tr>
+    <tr>
+        <td>2020 — Third</td>
+        <td>6.25 BTC</td>
+    </tr>
+    <tr>
+        <td>2024 — Fourth</td>
+        <td>3.125 BTC</td>
+    </tr>
+    <tr>
+        <td>Next halving</td>
+        <td>1.5625 BTC</td>
+    </tr>
+</table>
+
+<p>The next halving happens after another 210,000 blocks. The calendar date is an estimate because block production times vary.</p>
+
+<h2>5. Why does the subsidy become smaller?</h2>
+
+<p>The subsidy follows a decreasing schedule. Each halving reduces the amount of new bitcoin created per block.</p>
+
+<p>This means the flow of newly issued bitcoin becomes smaller over time.</p>
+
+<div class="example">
+    <strong class="orange">A simple example</strong>
+    <p>Imagine a system that creates 100 new coins every period.</p>
+    <p>Then it reduces issuance to 50, then 25, then 12.5.</p>
+    <p>The amount of new money entering the system gets smaller with each reduction.</p>
+</div>
+
+<p>Bitcoin follows a similar principle, using its programmed block subsidy schedule.</p>
+
+<h2>6. What is monetary inflation in Bitcoin?</h2>
+
+<p>Monetary inflation can describe the increase in the supply of money over time.</p>
+
+<p>Bitcoin still has monetary issuance while new bitcoin is being created. However, the amount of new bitcoin issued per block decreases after each halving.</p>
+
+<p>As the existing supply grows and new issuance becomes smaller, Bitcoin's annual percentage rate of monetary supply growth generally declines.</p>
+
+<p>This is different from consumer price inflation. The price of goods and services is influenced by many factors, not just the supply of money.</p>
+
+<div class="lesson-box">
+    <h3 class="orange">Important distinction</h3>
+    <p>Bitcoin's predictable supply schedule does not guarantee that its market price will rise.</p>
+    <p>Market prices depend on supply, demand, liquidity, expectations and many other factors.</p>
+</div>
+
+<h2>7. What happens when the subsidy becomes very small?</h2>
+
+<p>Each halving reduces the block subsidy. Over a long period, the subsidy approaches zero.</p>
+
+<p>Bitcoin's smallest unit is called a satoshi. One bitcoin contains 100 million satoshis.</p>
+
+<p>Because the subsidy must be represented in whole satoshis, the schedule eventually reaches zero rather than continuing to issue fractional satoshis forever.</p>
+
+<p>At that stage, miners will rely on transaction fees for their block revenue.</p>
+
+<p>This is one reason transaction fees are an important part of Bitcoin's long-term design.</p>
+
+<h2>8. Why is the 21 million limit important?</h2>
+
+<p>Bitcoin's limited issuance makes its monetary supply more predictable than systems where money creation can be changed by central institutions.</p>
+
+<p>People can independently verify:</p>
+
+<ul>
+    <li>How many blocks have been created.</li>
+    <li>What subsidy is permitted at a particular block height.</li>
+    <li>Whether miners follow the issuance rules.</li>
+    <li>How much bitcoin has been issued according to the chain.</li>
+</ul>
+
+<p>However, a limited supply alone does not determine what something is worth. Demand and other economic factors still matter.</p>
+
+<h2>9. Can the 21 million limit be changed?</h2>
+
+<p>Bitcoin is open-source software. Developers can propose changes, but publishing a software change does not automatically make the entire network accept it.</p>
+
+<p>Full-node operators independently choose which consensus rules their nodes enforce.</p>
+
+<p>A change to the maximum supply would be a major consensus change. It would require participants across the network to adopt and accept new rules.</p>
+
+<div class="example">
+    <strong class="orange">Verify, don't trust</strong>
+    <p>Instead of relying only on someone's statement about Bitcoin's supply, you can run your own full node and independently verify the blocks and issuance rules.</p>
+</div>
+
+<h2>10. Try a simple supply calculation</h2>
+
+<p>Imagine a block subsidy of 3.125 BTC and 100 blocks being created.</p>
+
+<p>The new subsidy issued across those blocks would be:</p>
+
+<div class="example">
+    <strong>3.125 BTC × 100 blocks = 312.5 BTC</strong>
+    <p>This is an educational calculation. Actual issuance depends on the valid subsidy at each block height.</p>
+</div>
+
+<h2>Test your knowledge</h2>
+
+<div class="quiz">
+
+<form id="quizForm">
+
+<div class="question">
+<strong>1. What is Bitcoin's approximate maximum supply?</strong>
+<label><input type="radio" name="q1" value="a"> 100 million BTC</label>
+<label><input type="radio" name="q1" value="b"> 21 million BTC</label>
+<label><input type="radio" name="q1" value="c"> Unlimited BTC</label>
+</div>
+
+<div class="question">
+<strong>2. After how many blocks does a Bitcoin halving occur?</strong>
+<label><input type="radio" name="q2" value="a"> 10,000 blocks</label>
+<label><input type="radio" name="q2" value="b"> 1 million blocks</label>
+<label><input type="radio" name="q2" value="c"> 210,000 blocks</label>
+</div>
+
+<div class="question">
+<strong>3. What happens to the block subsidy after a halving?</strong>
+<label><input type="radio" name="q3" value="a"> It is reduced by half.</label>
+<label><input type="radio" name="q3" value="b"> It doubles.</label>
+<label><input type="radio" name="q3" value="c"> It becomes unlimited.</label>
+</div>
+
+<div class="question">
+<strong>4. What is the main source of new bitcoin issuance?</strong>
+<label><input type="radio" name="q4" value="a"> Bank transfers</label>
+<label><input type="radio" name="q4" value="b"> The block subsidy claimed by miners</label>
+<label><input type="radio" name="q4" value="c"> Bitcoin exchanges</label>
+</div>
+
+<button type="button" onclick="checkQuiz()">Check my answers</button>
+
+</form>
+
+<p id="result" aria-live="polite"></p>
+
+</div>
+
+<div class="lesson-box">
+<h2 class="orange">Final thought</h2>
+
+<p>Bitcoin's monetary policy is based on a predictable issuance schedule enforced by consensus rules.</p>
+
+<p>New bitcoin is introduced through mining, the block subsidy decreases through halvings, and the total supply approaches its protocol limit.</p>
+
+<p>Understanding these rules helps you understand why Bitcoin is different from traditional monetary systems.</p>
+
+<p>Remember: predictable supply does not mean predictable market prices.</p>
+</div>
+
+<p><a href="index.html" class="orange">← Back to Bitcoin Journey</a></p>
+
+</main>
+
+<footer>
+Bitcoin Journey — Learn Bitcoin step by step.
+</footer>
+
+<script>
+function checkQuiz() {
+    const answers = {
+        q1: "b",
+        q2: "c",
+        q3: "a",
+        q4: "b"
+    };
+
+    let score = 0;
+
+    for (const question in answers) {
+        const selected = document.querySelector(
+            'input[name="' + question + '"]:checked'
+        );
+
+        if (selected && selected.value === answers[question]) {
+            score++;
+        }
+    }
+
+    const result = document.getElementById("result");
+
+    if (score === 4) {
+        result.textContent =
+            "Excellent! You got all 4 answers correct!";
+    } else {
+        result.textContent =
+            "You scored " + score + " out of 4. Review the lesson and try again.";
+    }
+}
+</script>
+
+</body>
+</html>
