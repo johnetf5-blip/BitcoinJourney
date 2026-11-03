@@ -1,0 +1,359 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lesson 18 - Bitcoin Security and Common Scams</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #f5f5f5;
+            color: #222;
+            line-height: 1.7;
+            margin: 0;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 850px;
+            margin: auto;
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+        }
+
+        h1, h2, h3 {
+            line-height: 1.3;
+        }
+
+        h1 {
+            color: #f7931a;
+        }
+
+        h2 {
+            margin-top: 30px;
+            color: #333;
+            border-bottom: 2px solid #f7931a;
+            padding-bottom: 6px;
+        }
+
+        .warning {
+            background: #fff1e5;
+            border-left: 5px solid #f7931a;
+            padding: 15px;
+            margin: 20px 0;
+        }
+
+        .example {
+            background: #eef5ff;
+            padding: 15px;
+            border-radius: 8px;
+            margin: 15px 0;
+        }
+
+        .question {
+            background: #f5f5f5;
+            padding: 15px;
+            border-radius: 8px;
+            margin: 15px 0;
+        }
+
+        button {
+            background: #f7931a;
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 16px;
+            margin-top: 15px;
+        }
+
+        button:hover {
+            background: #d97900;
+        }
+
+        .result {
+            font-weight: bold;
+            margin-top: 15px;
+        }
+
+        .back {
+            display: inline-block;
+            margin-top: 30px;
+            color: #d97900;
+            font-weight: bold;
+            text-decoration: none;
+        }
+
+        .back:hover {
+            text-decoration: underline;
+        }
+
+        @media (max-width: 600px) {
+            body {
+                padding: 10px;
+            }
+
+            .container {
+                padding: 18px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>Lesson 18: Bitcoin Security and Common Scams</h1>
+
+    <p>
+        Bitcoin gives people control over their own money.
+        But with that control comes responsibility.
+        If someone gets access to your private keys or recovery phrase,
+        they may be able to steal your Bitcoin.
+    </p>
+
+    <div class="warning">
+        <strong>Important rule:</strong>
+        Never share your Bitcoin recovery phrase or private keys
+        with anyone. A legitimate support person does not need them.
+    </div>
+
+    <h2>1. What Are Private Keys?</h2>
+
+    <p>
+        A private key is a secret number that allows someone to spend
+        Bitcoin from an address controlled by that key.
+    </p>
+
+    <p>
+        Think of your Bitcoin address like an account number that
+        people can send money to. Your private key is like the secret
+        authority that allows you to spend that money.
+    </p>
+
+    <div class="example">
+        <strong>Example:</strong>
+        You can give someone your Bitcoin address to receive Bitcoin.
+        But you must never give them your private key.
+    </div>
+
+    <h2>2. Public Keys and Private Keys</h2>
+
+    <p>
+        Bitcoin uses cryptography to connect public keys and private
+        keys.
+    </p>
+
+    <ul>
+        <li><strong>Private key:</strong> Secret information used to authorise spending.</li>
+        <li><strong>Public key:</strong> Information mathematically derived from a private key.</li>
+        <li><strong>Bitcoin address:</strong> A payment destination derived from public-key information or a script.</li>
+    </ul>
+
+    <p>
+        You can share a Bitcoin address to receive payments.
+        Keep your private keys secret.
+    </p>
+
+    <h2>3. What Is a Seed Phrase?</h2>
+
+    <p>
+        A seed phrase, also called a recovery phrase, is usually
+        a list of 12 or 24 words used by a wallet to recover its
+        keys.
+    </p>
+
+    <p>
+        If your hardware wallet breaks or you lose your device,
+        the recovery phrase may allow you to restore access to
+        your Bitcoin wallet.
+    </p>
+
+    <div class="warning">
+        <strong>Never do these things:</strong>
+        <ul>
+            <li>Send your seed phrase through WhatsApp or email.</li>
+            <li>Take a screenshot of your seed phrase.</li>
+            <li>Store it in an online document or cloud account.</li>
+            <li>Enter it into a website because someone tells you to.</li>
+        </ul>
+    </div>
+
+    <h2>4. Hardware Wallets and Software Wallets</h2>
+
+    <h3>Hardware wallets</h3>
+
+    <p>
+        A hardware wallet is a physical device designed to keep
+        private keys protected from ordinary internet-connected
+        computer environments.
+    </p>
+
+    <p>
+        Examples include Trezor and Ledger devices.
+    </p>
+
+    <h3>Software wallets</h3>
+
+    <p>
+        A software wallet is an application installed on a computer
+        or mobile phone. It allows you to receive, store and send
+        Bitcoin.
+    </p>
+
+    <p>
+        Software wallets can be convenient, but their security also
+        depends on the security of the device they run on.
+    </p>
+
+    <div class="example">
+        <strong>Remember:</strong>
+        A hardware wallet does not remove every risk.
+        You still need to protect your recovery phrase and verify
+        what you approve on the device.
+    </div>
+
+    <h2>5. Common Bitcoin Scams</h2>
+
+    <h3>Fake investment promises</h3>
+    <p>
+        Someone promises to double your Bitcoin or guarantee
+        enormous profits. These are warning signs of a scam.
+    </p>
+
+    <h3>Fake wallet applications</h3>
+    <p>
+        Criminals may create applications that look like real
+        wallets. They may try to steal your recovery phrase.
+    </p>
+
+    <h3>Phishing attacks</h3>
+    <p>
+        A scammer sends a fake email, message or website pretending
+        to be a wallet company or exchange.
+    </p>
+
+    <h3>Fake technical support</h3>
+    <p>
+        Someone contacts you claiming to help fix your wallet.
+        They ask for your recovery phrase. This is a serious
+        warning sign.
+    </p>
+
+    <h2>6. How to Protect Your Bitcoin</h2>
+
+    <ul>
+        <li>Buy hardware wallets from official or trusted sources.</li>
+        <li>Keep your recovery phrase offline and private.</li>
+        <li>Check website addresses carefully.</li>
+        <li>Download wallet software from official sources.</li>
+        <li>Verify the receiving address before sending Bitcoin.</li>
+        <li>Check transaction details on your hardware wallet screen.</li>
+        <li>Keep your computer and phone updated.</li>
+        <li>Be careful with unexpected messages and links.</li>
+        <li>Test a small transaction before sending a large amount.</li>
+    </ul>
+
+    <h2>7. Verify, Don't Trust</h2>
+
+    <p>
+        Bitcoin allows people to verify transactions and network
+        rules instead of depending entirely on a bank or another
+        person.
+    </p>
+
+    <p>
+        Running your own Bitcoin node allows you to independently
+        check transactions and blocks according to the rules
+        your node enforces.
+    </p>
+
+    <p>
+        Remember: a wallet helps you manage your keys, while a
+        full node independently verifies the Bitcoin blockchain.
+        They have different jobs.
+    </p>
+
+    <div class="warning">
+        <strong>Final lesson:</strong>
+        Bitcoin gives you financial responsibility.
+        Learn how your wallet works, protect your keys and never
+        trust strangers with your recovery phrase.
+    </div>
+
+    <h2>8. Test Your Knowledge</h2>
+
+    <p>Choose the correct answer for each question.</p>
+
+    <div class="question">
+        <p><strong>1. What should you do with your recovery phrase?</strong></p>
+        <label><input type="radio" name="q1" value="a"> Share it with wallet support.</label><br>
+        <label><input type="radio" name="q1" value="b"> Keep it private and secure offline.</label><br>
+        <label><input type="radio" name="q1" value="c"> Post it online.</label>
+    </div>
+
+    <div class="question">
+        <p><strong>2. What is a private key used for?</strong></p>
+        <label><input type="radio" name="q2" value="a"> Authorising Bitcoin spending.</label><br>
+        <label><input type="radio" name="q2" value="b"> Checking the weather.</label><br>
+        <label><input type="radio" name="q2" value="c"> Creating an email account.</label>
+    </div>
+
+    <div class="question">
+        <p><strong>3. Someone promises to double your Bitcoin. What should you do?</strong></p>
+        <label><input type="radio" name="q3" value="a"> Send them your Bitcoin.</label><br>
+        <label><input type="radio" name="q3" value="b"> Give them your recovery phrase.</label><br>
+        <label><input type="radio" name="q3" value="c"> Recognise it as a scam warning sign.</label>
+    </div>
+
+    <div class="question">
+        <p><strong>4. What does your own full Bitcoin node do?</strong></p>
+        <label><input type="radio" name="q4" value="a"> Guarantee that Bitcoin's price increases.</label><br>
+        <label><input type="radio" name="q4" value="b"> Independently verify blocks and transactions.</label><br>
+        <label><input type="radio" name="q4" value="c"> Recover a stolen seed phrase.</label>
+    </div>
+
+    <button onclick="checkAnswers()">Check My Answers</button>
+
+    <p id="result" class="result"></p>
+
+    <a class="back" href="index.html">← Back to Bitcoin Journey</a>
+
+</div>
+
+<script>
+function checkAnswers() {
+    const answers = {
+        q1: "b",
+        q2: "a",
+        q3: "c",
+        q4: "b"
+    };
+
+    let score = 0;
+
+    for (let question in answers) {
+        const selected = document.querySelector(
+            'input[name="' + question + '"]:checked'
+        );
+
+        if (selected && selected.value === answers[question]) {
+            score++;
+        }
+    }
+
+    document.getElementById("result").textContent =
+        "You scored " + score + " out of 4.";
+}
+</script>
+
+</body>
+</html>
