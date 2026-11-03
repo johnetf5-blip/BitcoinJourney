@@ -312,6 +312,86 @@ footer {
     .card { padding: 19px; }
     .card-intro { min-height: 0; }
 }
+
+/* Bitcoin Journey support section */
+.support-section {
+    max-width: 1000px;
+    margin: 50px auto;
+    padding: 30px 20px;
+    background: #111a27;
+    border: 1px solid #2b394b;
+    border-radius: 15px;
+    text-align: center;
+}
+
+.support-section h2 {
+    color: #f7931a;
+}
+
+.support-section p {
+    color: #a9b6c8;
+}
+
+.support-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    margin-top: 25px;
+}
+
+.support-card {
+    background: #0c131e;
+    border: 1px solid #2b394b;
+    border-radius: 12px;
+    padding: 22px;
+    overflow-wrap: anywhere;
+}
+
+.support-card h3 {
+    color: #f7931a;
+}
+
+.support-qr {
+    background: white;
+    display: inline-block;
+    padding: 12px;
+    border-radius: 8px;
+    margin: 15px 0;
+    min-width: 154px;
+    min-height: 154px;
+}
+
+.support-qr img {
+    display: block;
+}
+
+.support-address {
+    font-size: 12px;
+    color: #f4f7fb;
+    overflow-wrap: anywhere;
+    margin: 12px 0;
+}
+
+.support-button {
+    background: #f7931a;
+    color: #080d14;
+    border: none;
+    border-radius: 6px;
+    padding: 11px 18px;
+    cursor: pointer;
+    font-weight: bold;
+    margin: 5px;
+}
+
+.support-button:hover {
+    background: #d97900;
+}
+
+.support-thanks {
+    margin-top: 25px;
+    color: #f7931a !important;
+}
+
 </style>
 </head>
 
@@ -506,6 +586,7 @@ footer {
     <p><a class="button" href="bitcoin-lightning.html">Start Lesson 14 →</a></p>
 </div>
 
+
 <div class="info-item">
     <h3><span class="orange">15.</span> Bitcoin Forks</h3>
     <p>Understand soft forks, hard forks, Bitcoin Cash and how Bitcoin's consensus rules work.</p>
@@ -517,6 +598,7 @@ footer {
     <p>Understand inflation, purchasing power, money creation and how Bitcoin's supply schedule works.</p>
     <p><a class="button" href="bitcoin-inflation.html">Start Lesson 16 →</a></p>
 </div>
+
  <div class="info-item">
     <h3><span class="orange">17.</span> Bitcoin Mining Economics</h3>
     <p>Learn how Bitcoin miners earn rewards, pay operating costs, compete through Proof of Work and help secure the network.</p>
@@ -541,7 +623,46 @@ footer {
 </div>
 </div>
 </section>
+<section class="about" id="support">
+    <div class="eyebrow">Support independent education</div>
+    <h2>Support Bitcoin Journey</h2>
 
+    <p class="muted">
+        If you find these free lessons useful, you can support
+        this educational project with Bitcoin.
+        Every contribution helps us keep learning resources available.
+    </p>
+
+    <h3>⚡ Donate with Lightning</h3>
+    <p class="muted">
+        Use a Lightning wallet that supports BOLT12 offers.
+    </p>
+
+    <p>
+        <a class="button"
+           href="lightning:lno1pgqppmsrse80qf0aara4slvcjxrvu6j2rp5ftmjy4yntlsmsutpkvkt6878s8ne35ujdwlezuxr60wwzerywyhvhgq3x5waqwp57tfrw7qrquk35qgpvvktwpkmqf30flqh99j8v5u4ju8m6nsdyz4a7nk0egqyet70mj7cqxdgtmk9xf3yenh4jnjpgvjdftp34xh5568a2w9fkqylhsravl33vv9mw3pqn2z8cuyd0pc8j9csjywkkavnqxztaahvft67qmm5l697mhn9zjammjepwuggl2wd8y9qmqhrayfwuqqexv9cm26358u2preg6gcmeszg00dlxwfjqltmfcjuxg7x4cwkdaj6uxk8sw83nygtmnx54raypeygscacq
+ Copy Phoenix offer
+           Open Lightning Offer
+        </a>
+    </p>
+
+    <h3>₿ Donate with On-chain Bitcoin</h3>
+    <p class="muted">
+        You can also send Bitcoin directly to this address:
+    </p>
+
+    <div class="result">
+        <p style="overflow-wrap:anywhere;">
+            bc1px6gpkldgt5gmqhjls4qdlwn637mv7nx0e7ae5398j4rp9jg036lsrp39rn
+        </p>
+    </div>
+
+    <p class="note">
+        Always check the address carefully before sending.
+        Bitcoin transactions cannot normally be reversed.
+        Donations are voluntary and non-refundable.
+    </p>
+</section>
     <section class="about" id="about">
         <div class="eyebrow">About this project</div>
         <h2>Knowledge before decisions.</h2>
@@ -665,6 +786,102 @@ $("savingsForm").addEventListener("submit", event => {
 $("bitcoinForm").requestSubmit();
 $("satoshiForm").requestSubmit();
 $("savingsForm").requestSubmit();
+</script>
+
+<section class="support-section">
+
+    <h2>Support Bitcoin Journey 🟠</h2>
+
+    <p>
+        If you find these lessons useful, you can support
+        Bitcoin education by sending Bitcoin directly.
+    </p>
+
+    <div class="support-grid">
+
+        <div class="support-card">
+
+            <h3>⚡ Lightning Network</h3>
+
+            <p>Fast Bitcoin payments using Lightning.</p>
+
+            <div class="support-qr" id="lightning-qr"></div>
+
+            <div class="support-address" id="lightning-address">
+                lno1pgqppmsrse80qf0aara4slvcjxrvu6j2rp5ftmjy4yntlsmsutpkvkt6878s8ne35ujdwlezuxr60wwzerywyhvhgq3x5waqwp57tfrw7qrquk35qgpvvktwpkmqf30flqh99j8v5u4ju8m6nsdyz4a7nk0egqyet70mj7cqxdgtmk9xf3yenh4jnjpgvjdftp34xh5568a2w9fkqylhsravl33vv9mw3pqn2z8cuyd0pc8j9csjywkkavnqxztaahvft67qmm5l697mhn9zjammjepwuggl2wd8y9qmqhrayfwuqqexv9cm26358u2preg6gcmeszg00dlxwfjqltmfcjuxg7x4cwkdaj6uxk8sw83nygtmnx54raypeygscacq
+            </div>
+
+            <button class="support-button"
+                onclick="copyPayment('lightning-address')">
+                Copy Lightning Offer
+            </button>
+
+        </div>
+
+        <div class="support-card">
+
+            <h3>₿ Bitcoin On-chain</h3>
+
+            <p>Send Bitcoin directly to the Bitcoin blockchain.</p>
+
+            <div class="support-qr" id="onchain-qr"></div>
+
+            <div class="support-address" id="onchain-address">
+                bc1px6gpkldgt5gmqhjls4qdlwn637mv7nx0e7ae5398j4rp9jg036lsrp39rn
+            </div>
+
+            <button class="support-button"
+                onclick="copyPayment('onchain-address')">
+                Copy Bitcoin Address
+            </button>
+
+        </div>
+
+    </div>
+
+    <p class="support-thanks">
+        Thank you for supporting open Bitcoin education.
+        Verify, don't trust.
+    </p>
+
+</section>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+
+<script>
+const lightningOffer =
+document.getElementById("lightning-address").textContent.trim();
+
+const bitcoinAddress =
+document.getElementById("onchain-address").textContent.trim();
+
+new QRCode(document.getElementById("lightning-qr"), {
+    text: lightningOffer,
+    width: 130,
+    height: 130,
+    colorDark: "#000000",
+    colorLight: "#ffffff",
+    correctLevel: QRCode.CorrectLevel.L
+});
+
+new QRCode(document.getElementById("onchain-qr"), {
+    text: "bitcoin:" + bitcoinAddress,
+    width: 130,
+    height: 130,
+    colorDark: "#000000",
+    colorLight: "#ffffff",
+    correctLevel: QRCode.CorrectLevel.M
+});
+
+function copyPayment(elementId) {
+    const text = document.getElementById(elementId).textContent.trim();
+
+    navigator.clipboard.writeText(text).then(() => {
+        alert("Payment details copied!");
+    }).catch(() => {
+        alert("Copy failed. Please select and copy the address manually.");
+    });
+}
 </script>
 
 </body>
