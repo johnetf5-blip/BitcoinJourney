@@ -1,0 +1,452 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bitcoin Mining Economics | Bitcoin Journey</title>
+<style>
+* { box-sizing: border-box; }
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #08111f;
+    color: #e8edf5;
+    line-height: 1.7;
+}
+header {
+    padding: 22px 8%;
+    background: #101d30;
+    border-bottom: 1px solid #26364d;
+}
+header a {
+    color: #ff9d36;
+    text-decoration: none;
+    font-weight: bold;
+}
+main {
+    max-width: 850px;
+    margin: 45px auto;
+    padding: 0 22px;
+}
+h1, h2 { line-height: 1.3; }
+h1 { font-size: 38px; }
+h2 { color: #ff9d36; margin-top: 35px; }
+p, li { color: #c4cede; }
+.orange { color: #ff9d36; }
+.card {
+    background: #101d30;
+    border: 1px solid #26364d;
+    border-radius: 12px;
+    padding: 22px;
+    margin: 22px 0;
+}
+.example {
+    background: #15243a;
+    border-left: 4px solid #ff9d36;
+    padding: 16px;
+    margin: 18px 0;
+    border-radius: 6px;
+}
+.diagram {
+    background: #15243a;
+    border: 1px solid #35465e;
+    border-radius: 10px;
+    padding: 18px;
+    text-align: center;
+    margin: 20px 0;
+}
+.diagram strong { color: #ff9d36; }
+.arrow {
+    color: #ff9d36;
+    font-size: 23px;
+    font-weight: bold;
+}
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 18px 0;
+}
+th, td {
+    padding: 12px;
+    border: 1px solid #35465e;
+    text-align: left;
+}
+th {
+    color: #ff9d36;
+    background: #15243a;
+}
+button {
+    background: #ff9d36;
+    color: #08111f;
+    border: 0;
+    padding: 12px 20px;
+    border-radius: 7px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 12px;
+}
+button:hover { background: #ffb45f; }
+.question { margin: 22px 0; }
+label {
+    display: block;
+    margin: 8px 0;
+    color: #c4cede;
+    cursor: pointer;
+}
+#result {
+    font-weight: bold;
+    margin-top: 18px;
+}
+footer {
+    text-align: center;
+    padding: 30px;
+    color: #8292a8;
+}
+@media(max-width:600px) {
+    h1 { font-size: 29px; }
+    table { font-size: 13px; }
+    th, td { padding: 8px; }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <a href="index.html">BITCOIN JOURNEY</a>
+</header>
+
+<main>
+
+<p class="orange">LESSON 17 · BITCOIN MINING</p>
+
+<h1>Bitcoin Mining Economics</h1>
+
+<p>
+Bitcoin mining is more than computers solving mathematical puzzles.
+It is an economic system that helps secure the Bitcoin network.
+But why do miners spend money on electricity and expensive machines?
+How do they earn Bitcoin?
+</p>
+
+<div class="card">
+    <h2>1. What is Bitcoin mining?</h2>
+
+    <p>
+    Bitcoin mining is the process of using specialised computers
+    to perform Proof of Work. Miners compete to find a valid block
+    that follows Bitcoin's consensus rules.
+    </p>
+
+    <p>
+    Miners collect transactions, construct candidate blocks and
+    repeatedly calculate hashes using the SHA-256 algorithm.
+    They are searching for a hash that meets the network's
+    current difficulty target.
+    </p>
+
+    <p>
+    Finding a valid block is difficult, but checking the result
+    is relatively easy for other network participants.
+    </p>
+
+    <div class="diagram">
+        <strong>TRANSACTIONS</strong>
+        <div class="arrow">↓</div>
+        <strong>MINERS BUILD BLOCKS</strong>
+        <div class="arrow">↓</div>
+        <strong>PROOF OF WORK</strong>
+        <div class="arrow">↓</div>
+        <strong>FULL NODES VERIFY THE BLOCK</strong>
+    </div>
+
+    <p>
+    Important: miners produce candidate blocks, but full nodes
+    independently verify whether those blocks follow Bitcoin's rules.
+    Mining power alone cannot force a node to accept an invalid block.
+    </p>
+</div>
+
+<div class="card">
+    <h2>2. How do miners earn Bitcoin?</h2>
+
+    <p>
+    Miners receive two main forms of revenue when they successfully
+    produce a valid block:
+    </p>
+
+    <ul>
+        <li><strong>Block subsidy:</strong> Newly issued bitcoin awarded to the miner who produces the valid block.</li>
+        <li><strong>Transaction fees:</strong> Fees attached to the transactions included in that block.</li>
+    </ul>
+
+    <div class="example">
+        <strong>Example: Block reward</strong>
+        <p>Imagine a block contains:</p>
+        <p>Block subsidy: 3.125 BTC</p>
+        <p>Transaction fees: 0.15 BTC</p>
+        <p><strong>Total block reward: 3.275 BTC</strong></p>
+        <p>This is an illustrative example, not a guaranteed mining income.</p>
+    </div>
+
+    <p>
+    Mining pools distribute earnings among participants according
+    to their contribution and the pool's payment rules. Therefore,
+    an individual miner may receive a share rather than the entire
+    block reward.
+    </p>
+</div>
+
+<div class="card">
+    <h2>3. Why does mining cost money?</h2>
+
+    <p>
+    Mining requires physical equipment and electricity.
+    Running powerful machines continuously creates operating costs.
+    </p>
+
+    <ul>
+        <li><strong>Electricity:</strong> Mining machines consume power around the clock.</li>
+        <li><strong>Hardware:</strong> ASIC machines are specialised computers designed for Bitcoin mining.</li>
+        <li><strong>Cooling:</strong> Equipment produces heat and may need ventilation or cooling systems.</li>
+        <li><strong>Maintenance:</strong> Machines need repairs, replacement parts and monitoring.</li>
+        <li><strong>Facilities:</strong> Buildings, internet connections and other infrastructure cost money.</li>
+    </ul>
+
+    <div class="example">
+        <strong>Simple electricity example</strong>
+        <p>
+        Imagine a mining machine uses 3,000 watts of electricity.
+        </p>
+        <p>That equals 3 kilowatts.</p>
+        <p>Running for 24 hours uses:</p>
+        <p><strong>3 × 24 = 72 kWh per day.</strong></p>
+        <p>
+        At an electricity price of £0.20 per kWh:
+        </p>
+        <p><strong>72 × £0.20 = £14.40 per day.</strong></p>
+        <p>
+        This is only the electricity cost. It excludes equipment,
+        cooling and other expenses.
+        </p>
+    </div>
+</div>
+
+<div class="card">
+    <h2>4. What is mining difficulty?</h2>
+
+    <p>
+    Bitcoin automatically adjusts mining difficulty approximately
+    every 2,016 blocks. At an average target of around 10 minutes
+    per block, this is roughly every two weeks.
+    </p>
+
+    <p>
+    If blocks have been found too quickly, difficulty generally
+    increases. If they have been found too slowly, difficulty
+    generally decreases.
+    </p>
+
+    <p>
+    This adjustment helps Bitcoin maintain an average block
+    production target of approximately 10 minutes over time.
+    Individual blocks can take much less or much longer.
+    </p>
+
+    <div class="diagram">
+        <strong>MORE MINING POWER</strong>
+        <div class="arrow">↓</div>
+        <strong>DIFFICULTY ADJUSTMENT</strong>
+        <div class="arrow">↓</div>
+        <strong>BLOCK TIME TARGET ≈ 10 MINUTES</strong>
+    </div>
+
+    <p>
+    Mining difficulty is not controlled by one company or government.
+    It is calculated according to the rules followed by Bitcoin nodes.
+    </p>
+</div>
+
+<div class="card">
+    <h2>5. How does the halving affect miners?</h2>
+
+    <p>
+    Approximately every 210,000 blocks, Bitcoin reduces the block
+    subsidy by half. This is called the halving.
+    </p>
+
+    <table>
+        <tr>
+            <th>Period</th>
+            <th>Block subsidy</th>
+        </tr>
+        <tr><td>2009</td><td>50 BTC</td></tr>
+        <tr><td>2012</td><td>25 BTC</td></tr>
+        <tr><td>2016</td><td>12.5 BTC</td></tr>
+        <tr><td>2020</td><td>6.25 BTC</td></tr>
+        <tr><td>2024</td><td>3.125 BTC</td></tr>
+        <tr><td>Next halving</td><td>1.5625 BTC</td></tr>
+    </table>
+
+    <p>
+    When the subsidy falls, miners receive fewer newly issued
+    bitcoins for each block. This can put pressure on miners
+    whose operating costs are high.
+    </p>
+
+    <p>
+    Miners may respond by improving equipment efficiency,
+    finding cheaper electricity or changing their operations.
+    </p>
+
+    <p>
+    Transaction fees can also become an increasingly important
+    source of miner revenue as the block subsidy decreases.
+    </p>
+</div>
+
+<div class="card">
+    <h2>6. What is mining profitability?</h2>
+
+    <p>
+    Mining profitability describes whether a miner earns more
+    revenue than they spend on operating and maintaining equipment.
+    </p>
+
+    <p><strong>Basic calculation:</strong></p>
+
+    <div class="example">
+        <p>Total mining revenue: £30 per day</p>
+        <p>Electricity: £14.40 per day</p>
+        <p>Other operating costs: £5.60 per day</p>
+        <p><strong>Estimated operating profit: £10 per day</strong></p>
+    </div>
+
+    <p>
+    This example assumes revenue is already converted into pounds.
+    It does not include every possible business cost, taxes or
+    equipment depreciation.
+    </p>
+
+    <p>
+    Real mining profitability changes with Bitcoin's market price,
+    network difficulty, transaction fees, electricity prices,
+    hardware efficiency and competition.
+    </p>
+
+    <p>
+    Mining is not guaranteed to make a profit.
+    </p>
+</div>
+
+<div class="card">
+    <h2>7. Why is mining important to Bitcoin?</h2>
+
+    <p>
+    Mining provides Proof of Work, making it expensive to rewrite
+    the blockchain's transaction history.
+    </p>
+
+    <p>
+    Miners compete to produce blocks. Full nodes independently
+    verify the blocks, transactions and monetary rules.
+    </p>
+
+    <p>
+    The combination of mining incentives, cryptographic verification
+    and independent node validation helps Bitcoin operate without
+    requiring one central organisation to approve every transaction.
+    </p>
+
+    <p>
+    Mining does not give miners unlimited authority. A miner cannot
+    create bitcoin beyond the permitted subsidy or make invalid
+    transactions valid for nodes following the consensus rules.
+    </p>
+</div>
+
+<div class="card">
+    <h2>8. Test your knowledge</h2>
+
+    <p>Choose one answer for each question.</p>
+
+    <form id="quiz">
+
+        <div class="question">
+            <p><strong>1. What are the two main sources of miner block revenue?</strong></p>
+            <label><input type="radio" name="q1" value="a"> Bank loans and government grants</label>
+            <label><input type="radio" name="q1" value="b"> Block subsidy and transaction fees</label>
+            <label><input type="radio" name="q1" value="c"> Electricity and hardware</label>
+        </div>
+
+        <div class="question">
+            <p><strong>2. Approximately how often does Bitcoin adjust mining difficulty?</strong></p>
+            <label><input type="radio" name="q2" value="a"> Every 100 blocks</label>
+            <label><input type="radio" name="q2" value="b"> Every year</label>
+            <label><input type="radio" name="q2" value="c"> Every 2,016 blocks</label>
+        </div>
+
+        <div class="question">
+            <p><strong>3. What happens to the block subsidy during a halving?</strong></p>
+            <label><input type="radio" name="q3" value="a"> It is reduced by half</label>
+            <label><input type="radio" name="q3" value="b"> It doubles</label>
+            <label><input type="radio" name="q3" value="c"> It becomes unlimited</label>
+        </div>
+
+        <div class="question">
+            <p><strong>4. Can miners force full nodes to accept invalid blocks?</strong></p>
+            <label><input type="radio" name="q4" value="a"> Yes, if they have enough mining machines</label>
+            <label><input type="radio" name="q4" value="b"> No, full nodes independently verify consensus rules</label>
+            <label><input type="radio" name="q4" value="c"> Yes, if electricity is cheap</label>
+        </div>
+
+        <button type="button" onclick="checkQuiz()">Check my answers</button>
+
+    </form>
+
+    <p id="result"></p>
+</div>
+
+<p><a href="index.html">← Back to Bitcoin Journey homepage</a></p>
+
+</main>
+
+<footer>
+    Bitcoin Journey · Learn Bitcoin step by step
+</footer>
+
+<script>
+function checkQuiz() {
+    const answers = {
+        q1: "b",
+        q2: "c",
+        q3: "a",
+        q4: "b"
+    };
+
+    let score = 0;
+
+    for (const question in answers) {
+        const selected = document.querySelector(
+            'input[name="' + question + '"]:checked'
+        );
+
+        if (selected && selected.value === answers[question]) {
+            score++;
+        }
+    }
+
+    const result = document.getElementById("result");
+    result.textContent = "You scored " + score + " out of 4.";
+
+    if (score === 4) {
+        result.textContent += " Excellent work! You understand Bitcoin mining economics.";
+    } else {
+        result.textContent += " Review the lesson and try again.";
+    }
+}
+</script>
+
+</body>
+</html>
