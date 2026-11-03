@@ -1,0 +1,373 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bitcoin Forks | Bitcoin Journey</title>
+<style>
+* { box-sizing: border-box; }
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #08111f;
+    color: #e8edf5;
+    line-height: 1.7;
+}
+header {
+    padding: 22px 8%;
+    background: #101d30;
+    border-bottom: 1px solid #26364d;
+}
+header a {
+    color: #ff9d36;
+    text-decoration: none;
+    font-weight: bold;
+}
+main {
+    max-width: 850px;
+    margin: 45px auto;
+    padding: 0 22px;
+}
+h1, h2 { line-height: 1.3; }
+h1 { font-size: 38px; }
+h2 { color: #ff9d36; margin-top: 35px; }
+p, li { color: #c4cede; }
+.orange { color: #ff9d36; }
+.card {
+    background: #101d30;
+    border: 1px solid #26364d;
+    border-radius: 12px;
+    padding: 22px;
+    margin: 22px 0;
+}
+.diagram {
+    background: #15243a;
+    border: 1px solid #35465e;
+    border-radius: 10px;
+    padding: 18px;
+    text-align: center;
+    margin: 20px 0;
+}
+.diagram strong { color: #ff9d36; }
+.arrow {
+    color: #ff9d36;
+    font-size: 23px;
+    font-weight: bold;
+}
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 18px 0;
+}
+th, td {
+    padding: 12px;
+    border: 1px solid #35465e;
+    text-align: left;
+}
+th {
+    color: #ff9d36;
+    background: #15243a;
+}
+button {
+    background: #ff9d36;
+    color: #08111f;
+    border: 0;
+    padding: 12px 20px;
+    border-radius: 7px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 12px;
+}
+button:hover { background: #ffb45f; }
+.question { margin: 22px 0; }
+label {
+    display: block;
+    margin: 8px 0;
+    color: #c4cede;
+    cursor: pointer;
+}
+#result {
+    font-weight: bold;
+    margin-top: 18px;
+}
+footer {
+    text-align: center;
+    padding: 30px;
+    color: #8292a8;
+}
+@media(max-width:600px) {
+    h1 { font-size: 29px; }
+    table { font-size: 13px; }
+    th, td { padding: 8px; }
+}
+</style>
+</head>
+<body>
+
+<header>
+    <a href="index.html">BITCOIN JOURNEY</a>
+</header>
+
+<main>
+
+<p class="orange">LESSON 15 · BITCOIN PROTOCOL</p>
+
+<h1>Bitcoin Forks: Soft Forks, Hard Forks and Bitcoin Cash</h1>
+
+<p>
+Bitcoin is an open-source protocol. People can propose changes to its
+software and rules, but how do those changes become part of the network?
+This is where the idea of a fork becomes important.
+</p>
+
+<div class="card">
+    <h2>1. What is a Bitcoin fork?</h2>
+
+    <p>
+    A fork happens when the rules used by different parts of a blockchain
+    network become different.
+    </p>
+
+    <p>
+    In software development, a fork can also mean creating a separate
+    version of a project's code. In Bitcoin, the word is often used when
+    discussing changes to consensus rules or the creation of a separate
+    cryptocurrency.
+    </p>
+
+    <p>
+    A fork does not automatically mean that Bitcoin has failed. It can
+    result from a software upgrade, disagreement about rules, or a
+    decision to create a separate network.
+    </p>
+</div>
+
+<div class="card">
+    <h2>2. What is a soft fork?</h2>
+
+    <p>
+    A soft fork is a change to consensus rules that makes the accepted
+    rules stricter while remaining compatible with older nodes that
+    follow the previous rules.
+    </p>
+
+    <p>
+    Older nodes may still accept blocks produced under the new rules,
+    even if they do not understand every new feature. They may not
+    independently enforce all the newer restrictions.
+    </p>
+
+    <div class="diagram">
+        <strong>OLD CONSENSUS RULES</strong>
+        <div class="arrow">↓</div>
+        <strong>NEW, MORE RESTRICTIVE RULES</strong>
+        <p>Older nodes can remain compatible, but may not enforce all new rules.</p>
+    </div>
+
+    <p>
+    One important example is Segregated Witness, usually called
+    SegWit, which activated on Bitcoin in 2017.
+    </p>
+</div>
+
+<div class="card">
+    <h2>3. What is a hard fork?</h2>
+
+    <p>
+    A hard fork is a change to consensus rules that is not backward
+    compatible. Nodes using the old rules may reject blocks that
+    follow the new rules.
+    </p>
+
+    <p>
+    If some participants continue using the old rules while others
+    use the new rules, the network can split into separate chains.
+    </p>
+
+    <div class="diagram">
+        <strong>ONE BLOCKCHAIN</strong>
+        <div class="arrow">↓</div>
+        <strong>TWO DIFFERENT RULE SETS</strong>
+        <div class="arrow">↙ &nbsp;&nbsp;&nbsp;&nbsp; ↘</div>
+        <strong>CHAIN A</strong>
+        <span> &nbsp; and &nbsp; </span>
+        <strong>CHAIN B</strong>
+    </div>
+
+    <p>
+    A hard fork does not always create two lasting networks. The result
+    depends on whether participants continue operating under different
+    rules.
+    </p>
+</div>
+
+<div class="card">
+    <h2>4. Bitcoin and Bitcoin Cash in 2017</h2>
+
+    <p>
+    In August 2017, a disagreement about Bitcoin's scaling approach
+    resulted in a hard fork and the creation of Bitcoin Cash (BCH).
+    </p>
+
+    <p>
+    Participants disagreed about how Bitcoin should handle more
+    transactions. One side supported keeping Bitcoin's existing block
+    size approach alongside other scaling improvements. Another side
+    wanted larger blocks to allow more transactions in each block.
+    </p>
+
+    <p>
+    Bitcoin Cash adopted a separate set of consensus rules, including
+    a larger block-size limit. It became a separate cryptocurrency with
+    its own blockchain.
+    </p>
+
+    <p>
+    Bitcoin (BTC) and Bitcoin Cash (BCH) share transaction history
+    before the split, but their blockchains developed separately
+    afterward.
+    </p>
+</div>
+
+<div class="card">
+    <h2>5. What do nodes have to do with forks?</h2>
+
+    <p>
+    Full nodes independently check blocks and transactions against
+    the consensus rules they are configured to follow.
+    </p>
+
+    <p>
+    A node running one rule set can reject a block that violates those
+    rules, even if miners have produced it.
+    </p>
+
+    <p>
+    This is why upgrading Bitcoin software is important. Node operators
+    decide which software and rules they run. Miners produce blocks,
+    but they cannot force every node to accept a rule change.
+    </p>
+</div>
+
+<div class="card">
+    <h2>6. Who decides which changes Bitcoin adopts?</h2>
+
+    <p>
+    Bitcoin does not have one central authority that can simply order
+    everyone to accept a change.
+    </p>
+
+    <p>
+    Developers can propose and write software changes. Miners can
+    signal support for certain upgrades. Businesses, wallet providers
+    and node operators also make their own decisions about which
+    software to run.
+    </p>
+
+    <p>
+    Ultimately, users and economic participants choose which rules
+    they recognise by deciding which software and network they use.
+    Changes that affect consensus require coordination across the
+    network.
+    </p>
+</div>
+
+<div class="card">
+    <h2>7. Why do forks matter?</h2>
+
+    <ul>
+        <li><strong>Rules matter:</strong> Different rules can produce different networks.</li>
+        <li><strong>Choice matters:</strong> Participants can decide which software and rules to follow.</li>
+        <li><strong>Coordination matters:</strong> Changes need broad understanding and coordination.</li>
+        <li><strong>Independence matters:</strong> Bitcoin has no single organisation with automatic authority over every node.</li>
+    </ul>
+
+    <p>
+    Understanding forks helps explain how an open-source monetary
+    network can evolve while participants continue to verify its rules.
+    </p>
+</div>
+
+<div class="card">
+    <h2>8. Test your knowledge</h2>
+    <p>Choose one answer for each question.</p>
+
+    <form id="quiz">
+
+        <div class="question">
+            <p><strong>1. What is a soft fork?</strong></p>
+            <label><input type="radio" name="q1" value="a"> A change to stricter rules that can remain backward compatible</label>
+            <label><input type="radio" name="q1" value="b"> A new type of Bitcoin wallet</label>
+            <label><input type="radio" name="q1" value="c"> A mining machine</label>
+        </div>
+
+        <div class="question">
+            <p><strong>2. What can happen during a hard fork?</strong></p>
+            <label><input type="radio" name="q2" value="a"> All Bitcoin disappears</label>
+            <label><input type="radio" name="q2" value="b"> Different rule sets can create separate blockchain networks</label>
+            <label><input type="radio" name="q2" value="c"> Every node must automatically upgrade</label>
+        </div>
+
+        <div class="question">
+            <p><strong>3. Which cryptocurrency emerged from the 2017 Bitcoin hard fork?</strong></p>
+            <label><input type="radio" name="q3" value="a"> Ethereum</label>
+            <label><input type="radio" name="q3" value="b"> Litecoin</label>
+            <label><input type="radio" name="q3" value="c"> Bitcoin Cash</label>
+        </div>
+
+        <div class="question">
+            <p><strong>4. What do full nodes do?</strong></p>
+            <label><input type="radio" name="q4" value="a"> Automatically accept every block miners produce</label>
+            <label><input type="radio" name="q4" value="b"> Independently verify blocks and transactions against their rules</label>
+            <label><input type="radio" name="q4" value="c"> Decide the market price of Bitcoin</label>
+        </div>
+
+        <button type="button" onclick="checkQuiz()">Check my answers</button>
+    </form>
+
+    <p id="result"></p>
+</div>
+
+<p><a href="index.html">← Back to Bitcoin Journey homepage</a></p>
+
+</main>
+
+<footer>
+    Bitcoin Journey · Learn Bitcoin step by step
+</footer>
+
+<script>
+function checkQuiz() {
+    const answers = {
+        q1: "a",
+        q2: "b",
+        q3: "c",
+        q4: "b"
+    };
+
+    let score = 0;
+
+    for (const question in answers) {
+        const selected = document.querySelector(
+            'input[name="' + question + '"]:checked'
+        );
+
+        if (selected && selected.value === answers[question]) {
+            score++;
+        }
+    }
+
+    const result = document.getElementById("result");
+    result.textContent = "You scored " + score + " out of 4.";
+
+    if (score === 4) {
+        result.textContent += " Excellent work! You understand Bitcoin forks.";
+    } else {
+        result.textContent += " Review the lesson and try again.";
+    }
+}
+</script>
+
+</body>
+</html>
