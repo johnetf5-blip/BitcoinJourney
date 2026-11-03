@@ -1,0 +1,526 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bitcoin Wallets | Bitcoin Journey</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #0b1220;
+            color: #e8edf5;
+            line-height: 1.7;
+        }
+
+        header {
+            padding: 22px 8%;
+            border-bottom: 1px solid #263247;
+        }
+
+        header a {
+            color: #f7931a;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        main {
+            max-width: 850px;
+            margin: 45px auto;
+            padding: 0 22px;
+        }
+
+        .tag {
+            color: #f7931a;
+            font-weight: bold;
+            letter-spacing: 2px;
+        }
+
+        h1, h2 {
+            color: #ffffff;
+            line-height: 1.3;
+        }
+
+        h1 {
+            font-size: 38px;
+        }
+
+        h2 {
+            margin-top: 35px;
+        }
+
+        .intro, .lesson-box, .quiz {
+            background: #151f30;
+            border: 1px solid #29364b;
+            border-radius: 12px;
+            padding: 22px;
+            margin: 22px 0;
+        }
+
+        .orange {
+            color: #f7931a;
+        }
+
+        .example {
+            background: #202d40;
+            padding: 15px;
+            border-left: 4px solid #f7931a;
+            margin: 18px 0;
+        }
+
+        .comparison {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+            margin: 20px 0;
+        }
+
+        .comparison > div {
+            background: #202d40;
+            border: 1px solid #344258;
+            border-radius: 10px;
+            padding: 18px;
+        }
+
+        button {
+            background: #f7931a;
+            color: #111827;
+            border: none;
+            border-radius: 7px;
+            padding: 12px 20px;
+            font-weight: bold;
+            cursor: pointer;
+            margin-top: 12px;
+        }
+
+        button:hover {
+            background: #ffad42;
+        }
+
+        .question {
+            border-bottom: 1px solid #29364b;
+            padding: 15px 0;
+        }
+
+        .question label {
+            display: block;
+            margin: 8px 0;
+            cursor: pointer;
+        }
+
+        #result {
+            font-weight: bold;
+            margin-top: 18px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 30px;
+            color: #9ba9bd;
+            border-top: 1px solid #263247;
+            margin-top: 50px;
+        }
+
+        @media (max-width: 600px) {
+            h1 {
+                font-size: 30px;
+            }
+
+            main {
+                margin-top: 25px;
+            }
+
+            .comparison {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <a href="index.html">← Bitcoin Journey Home</a>
+</header>
+
+<main>
+
+    <p class="tag">BITCOIN EDUCATION — LESSON 8</p>
+
+    <h1>Bitcoin Wallets: <span class="orange">Hot Wallets vs Cold Wallets</span></h1>
+
+    <div class="intro">
+        <p>
+            If you own bitcoin, you need a way to control it
+            and authorise transactions.
+        </p>
+
+        <p>
+            Bitcoin wallets help you do this using cryptographic
+            keys. But not all wallets work in the same way.
+        </p>
+
+        <p>
+            In this lesson, we will explore hot wallets,
+            cold wallets, hardware wallets and recovery phrases.
+        </p>
+    </div>
+
+    <h2>1. What is a Bitcoin wallet?</h2>
+
+    <p>
+        A Bitcoin wallet is software or a device that helps
+        you manage your Bitcoin keys and create transactions.
+    </p>
+
+    <p>
+        Your bitcoin is recorded on the Bitcoin blockchain.
+        A wallet does not physically contain your bitcoin.
+        It manages the keys that allow you to spend the
+        bitcoin associated with your wallet.
+    </p>
+
+    <div class="example">
+        <strong>Think of it this way:</strong>
+        <p>
+            Your bitcoin is recorded on the blockchain.
+            Your wallet holds the tools needed to prove
+            that you are authorised to spend it.
+        </p>
+    </div>
+
+    <h2>2. Public keys, private keys and addresses</h2>
+
+    <p>
+        Bitcoin uses cryptography to help control who can
+        spend bitcoin.
+    </p>
+
+    <ul>
+        <li>
+            <strong>Private key:</strong> A secret that allows
+            the owner to authorise spending.
+        </li>
+        <li>
+            <strong>Public key:</strong> A cryptographic value
+            derived from a private key.
+        </li>
+        <li>
+            <strong>Bitcoin address:</strong> A destination
+            that someone can use to send bitcoin to you.
+        </li>
+    </ul>
+
+    <div class="lesson-box">
+        <h3 class="orange">Remember this rule</h3>
+        <p>
+            You can share a Bitcoin receiving address when
+            someone needs to pay you.
+        </p>
+        <p>
+            Never share your private keys or recovery phrase.
+            Anyone who obtains them may be able to spend
+            your bitcoin.
+        </p>
+    </div>
+
+    <h2>3. What is a hot wallet?</h2>
+
+    <p>
+        A hot wallet is a Bitcoin wallet that operates on
+        an internet-connected device.
+    </p>
+
+    <p>
+        Examples include mobile wallets, desktop wallets
+        and browser wallets.
+    </p>
+
+    <div class="example">
+        <strong>Example:</strong>
+        <p>
+            You install a Bitcoin wallet on your smartphone.
+            You can check your balance, receive payments
+            and create transactions.
+        </p>
+    </div>
+
+    <p><strong>Advantages:</strong></p>
+
+    <ul>
+        <li>Convenient for everyday payments.</li>
+        <li>Usually quick to access.</li>
+        <li>Some options are free to use.</li>
+    </ul>
+
+    <p><strong>Risks:</strong></p>
+
+    <ul>
+        <li>Phones and computers can be infected with malware.</li>
+        <li>Fake wallet applications can steal information.</li>
+        <li>Phishing attacks can trick users into revealing secrets.</li>
+    </ul>
+
+    <h2>4. What is a cold wallet?</h2>
+
+    <p>
+        Cold storage means keeping private keys offline,
+        away from an internet-connected environment.
+    </p>
+
+    <p>
+        Hardware wallets are a common way to use cold
+        storage. They are dedicated devices designed to
+        protect private keys and sign transactions.
+    </p>
+
+    <div class="example">
+        <strong>Example:</strong>
+        <p>
+            You keep your private keys on a hardware wallet.
+            When you want to send bitcoin, you prepare a
+            transaction on your computer and approve it
+            using the hardware device.
+        </p>
+    </div>
+
+    <p><strong>Advantages:</strong></p>
+
+    <ul>
+        <li>Private keys can remain isolated from your computer.</li>
+        <li>Useful for long-term self-custody.</li>
+        <li>Transactions can be reviewed and approved on the device.</li>
+    </ul>
+
+    <p><strong>Risks:</strong></p>
+
+    <ul>
+        <li>Devices can be lost, damaged or stolen.</li>
+        <li>A compromised recovery phrase can put funds at risk.</li>
+        <li>Users can still be tricked into approving malicious transactions.</li>
+    </ul>
+
+    <h2>5. Hot wallets vs cold wallets</h2>
+
+    <div class="comparison">
+
+        <div>
+            <h3 class="orange">Hot wallet</h3>
+            <p><strong>Connection:</strong> Online device</p>
+            <p><strong>Best for:</strong> Everyday access</p>
+            <p><strong>Example:</strong> Mobile wallet</p>
+            <p><strong>Main concern:</strong> Online threats</p>
+        </div>
+
+        <div>
+            <h3 class="orange">Cold storage</h3>
+            <p><strong>Connection:</strong> Private keys kept offline</p>
+            <p><strong>Best for:</strong> Longer-term storage</p>
+            <p><strong>Example:</strong> Hardware wallet</p>
+            <p><strong>Main concern:</strong> Backup and physical security</p>
+        </div>
+
+    </div>
+
+    <p>
+        Neither option is automatically safe in every situation.
+        Security also depends on how carefully the wallet
+        is set up, backed up and used.
+    </p>
+
+    <h2>6. What is a recovery phrase?</h2>
+
+    <p>
+        Many Bitcoin wallets use a recovery phrase, commonly
+        made up of 12 or 24 words.
+    </p>
+
+    <p>
+        It can help you recover access to your wallet if
+        your device is lost or damaged, provided the wallet
+        uses the same backup standard and any additional
+        passphrase is also available.
+    </p>
+
+    <div class="lesson-box">
+        <h3 class="orange">Protect your recovery phrase</h3>
+
+        <ul>
+            <li>Write it down carefully and check the order.</li>
+            <li>Keep it somewhere private and secure.</li>
+            <li>Never photograph it or store it in ordinary cloud storage.</li>
+            <li>Never type it into a website or send it to someone.</li>
+            <li>Be careful of fake support staff asking for it.</li>
+        </ul>
+
+        <p>
+            <strong>Important:</strong> Never share your real
+            recovery phrase with anyone, including me.
+        </p>
+    </div>
+
+    <h2>7. What happens if you lose your hardware wallet?</h2>
+
+    <p>
+        Losing a hardware wallet does not necessarily mean
+        you have lost your bitcoin.
+    </p>
+
+    <p>
+        If you have a valid recovery backup and the necessary
+        additional passphrase, you may be able to restore
+        your wallet using a compatible wallet.
+    </p>
+
+    <p>
+        However, if someone obtains your recovery phrase,
+        they may be able to restore your wallet and spend
+        its bitcoin without possessing your original device.
+    </p>
+
+    <div class="example">
+        <strong>Important distinction:</strong>
+        <p>
+            The hardware wallet protects access to your keys.
+            The recovery backup helps you restore that access.
+            Both need careful protection.
+        </p>
+    </div>
+
+    <h2>8. How do you choose a Bitcoin wallet?</h2>
+
+    <p>Before choosing a wallet, consider these questions:</p>
+
+    <ol>
+        <li>Is it designed specifically for Bitcoin?</li>
+        <li>Is the software or device from a trustworthy source?</li>
+        <li>Can you independently verify receiving addresses?</li>
+        <li>Do you understand how to back it up?</li>
+        <li>Can you restore a wallet using a safe practice procedure?</li>
+        <li>Does it allow you to control your own private keys?</li>
+    </ol>
+
+    <p>
+        Learn how a wallet works before sending a large
+        amount of bitcoin to it. A small test transaction
+        can help you understand the process.
+    </p>
+
+    <h2>Test your knowledge</h2>
+
+    <div class="quiz">
+
+        <form id="quizForm">
+
+            <div class="question">
+                <strong>1. Where is bitcoin recorded?</strong>
+                <label><input type="radio" name="q1" value="a"> Inside a mobile phone</label>
+                <label><input type="radio" name="q1" value="b"> On the Bitcoin blockchain</label>
+                <label><input type="radio" name="q1" value="c"> Inside a hardware wallet</label>
+            </div>
+
+            <div class="question">
+                <strong>2. What is a hot wallet?</strong>
+                <label><input type="radio" name="q2" value="a"> A wallet operating on an internet-connected device</label>
+                <label><input type="radio" name="q2" value="b"> A wallet made of metal</label>
+                <label><input type="radio" name="q2" value="c"> A mining machine</label>
+            </div>
+
+            <div class="question">
+                <strong>3. What is a recovery phrase used for?</strong>
+                <label><input type="radio" name="q3" value="a"> Checking Bitcoin prices</label>
+                <label><input type="radio" name="q3" value="b"> Sending public addresses</label>
+                <label><input type="radio" name="q3" value="c"> Restoring access to a wallet</label>
+            </div>
+
+            <div class="question">
+                <strong>4. Should you share your recovery phrase with someone claiming to be wallet support?</strong>
+                <label><input type="radio" name="q4" value="a"> Yes, if they ask politely</label>
+                <label><input type="radio" name="q4" value="b"> No, never share it</label>
+                <label><input type="radio" name="q4" value="c"> Yes, if they promise to help</label>
+            </div>
+
+            <button type="button" onclick="checkQuiz()">Check my answers</button>
+
+        </form>
+
+        <p id="result"></p>
+
+    </div>
+
+    <div class="lesson-box">
+        <h2 class="orange">Final thought</h2>
+
+        <p>
+            Bitcoin gives people the ability to control
+            their own money, but that responsibility
+            comes with the need to protect their keys.
+        </p>
+
+        <p>
+            A wallet is not just an application or a device.
+            It is part of how you manage access to your
+            bitcoin.
+        </p>
+
+        <p>
+            Understand your wallet, protect your backup
+            and verify before approving transactions.
+        </p>
+    </div>
+
+    <p>
+        <a href="index.html" class="orange">← Back to Bitcoin Journey</a>
+    </p>
+
+</main>
+
+<footer>
+    Bitcoin Journey — Learn Bitcoin step by step.
+</footer>
+
+<script>
+    function checkQuiz() {
+
+        const answers = {
+            q1: "b",
+            q2: "a",
+            q3: "c",
+            q4: "b"
+        };
+
+        let score = 0;
+        const total = 4;
+
+        for (let question in answers) {
+
+            const selected = document.querySelector(
+                'input[name="' + question + '"]:checked'
+            );
+
+            if (selected && selected.value === answers[question]) {
+                score++;
+            }
+        }
+
+        const result = document.getElementById("result");
+
+        if (score === total) {
+            result.textContent =
+                "Excellent! You got all 4 answers correct!";
+        } else {
+            result.textContent =
+                "You scored " + score + " out of " + total +
+                ". Review the lesson and try again!";
+        }
+    }
+</script>
+
+</body>
+</html>
