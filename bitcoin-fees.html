@@ -1,0 +1,392 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bitcoin Transaction Fees | Bitcoin Journey</title>
+
+<style>
+* { box-sizing: border-box; }
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #0b1220;
+    color: #e8edf5;
+    line-height: 1.7;
+}
+
+header {
+    padding: 22px 8%;
+    border-bottom: 1px solid #263247;
+}
+
+header a, .orange { color: #f7931a; }
+
+header a {
+    text-decoration: none;
+    font-weight: bold;
+}
+
+main {
+    max-width: 850px;
+    margin: 45px auto;
+    padding: 0 22px;
+}
+
+.tag {
+    color: #f7931a;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+h1, h2 { color: white; line-height: 1.3; }
+h1 { font-size: 38px; }
+h2 { margin-top: 35px; }
+
+.intro, .lesson-box, .quiz {
+    background: #151f30;
+    border: 1px solid #29364b;
+    border-radius: 12px;
+    padding: 22px;
+    margin: 22px 0;
+}
+
+.example {
+    background: #202d40;
+    padding: 16px;
+    border-left: 4px solid #f7931a;
+    margin: 18px 0;
+}
+
+.steps { padding-left: 25px; }
+.steps li { margin-bottom: 12px; }
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 18px 0;
+}
+
+th, td {
+    border: 1px solid #35445a;
+    padding: 12px;
+    text-align: left;
+}
+
+th { color: #f7931a; }
+
+.question {
+    border-bottom: 1px solid #29364b;
+    padding: 15px 0;
+}
+
+.question label {
+    display: block;
+    margin: 8px 0;
+    cursor: pointer;
+}
+
+button {
+    background: #f7931a;
+    color: #111827;
+    border: none;
+    border-radius: 7px;
+    padding: 12px 20px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 12px;
+}
+
+button:hover { background: #ffad42; }
+
+#result {
+    font-weight: bold;
+    margin-top: 18px;
+}
+
+footer {
+    text-align: center;
+    padding: 30px;
+    color: #9ba9bd;
+    border-top: 1px solid #263247;
+    margin-top: 50px;
+}
+
+@media (max-width: 600px) {
+    h1 { font-size: 30px; }
+    main { margin-top: 25px; }
+    th, td { padding: 8px; font-size: 14px; }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <a href="index.html">← Bitcoin Journey Home</a>
+</header>
+
+<main>
+
+<p class="tag">BITCOIN EDUCATION — LESSON 11</p>
+
+<h1>Bitcoin Transaction Fees: <span class="orange">Why Do Transactions Cost Money?</span></h1>
+
+<div class="intro">
+    <p>When you send bitcoin, you usually pay a transaction fee.</p>
+
+    <p>But why is there a fee? Who receives it? Why can the same type of payment cost different amounts at different times?</p>
+
+    <p>In this lesson, we will understand Bitcoin fees and learn how to read a fee rate.</p>
+</div>
+
+<h2>1. What is a Bitcoin transaction fee?</h2>
+
+<p>A Bitcoin transaction fee is an amount of bitcoin paid by the person creating a transaction to incentivise miners to include that transaction in a block.</p>
+
+<p>The fee is not a payment to a bank or a central company. It is collected by the miner who successfully creates the block containing the transaction.</p>
+
+<div class="example">
+    <strong class="orange">Simple example</strong>
+    <p>Alice wants to send Bob 0.01 BTC. She creates a transaction and chooses a fee.</p>
+    <p>The transaction fee is separate from the 0.01 BTC she wants Bob to receive.</p>
+</div>
+
+<h2>2. Why do Bitcoin transactions need fees?</h2>
+
+<p>Bitcoin blocks have limited space. Not every waiting transaction can be included in the next block.</p>
+
+<p>Transaction fees create an incentive for miners to include transactions. They also help allocate limited block space when demand is high.</p>
+
+<p>Fees are an important part of Bitcoin's economic design.</p>
+
+<h2>3. Who receives the transaction fees?</h2>
+
+<p>Miners collect the fees from the transactions included in the blocks they successfully mine.</p>
+
+<p>A miner's block reward has two main parts:</p>
+
+<ul>
+    <li><strong>Block subsidy:</strong> Newly issued bitcoin allowed by the protocol.</li>
+    <li><strong>Transaction fees:</strong> Fees paid by users whose transactions are included in the block.</li>
+</ul>
+
+<div class="lesson-box">
+    <h3 class="orange">Remember</h3>
+    <p>Bitcoin miners do not simply receive every fee in the network. A miner receives the fees from the transactions included in its successfully mined block.</p>
+</div>
+
+<h2>4. Why do transaction fees change?</h2>
+
+<p>Bitcoin fees are influenced by supply and demand for block space.</p>
+
+<p>When many people want to make transactions at the same time, competition for limited block space can increase.</p>
+
+<p>When demand is lower, users may be able to get transactions confirmed with lower fee rates.</p>
+
+<table>
+    <tr>
+        <th>Network situation</th>
+        <th>Possible effect</th>
+    </tr>
+    <tr>
+        <td>Low transaction demand</td>
+        <td>Lower fee rates may be sufficient.</td>
+    </tr>
+    <tr>
+        <td>High transaction demand</td>
+        <td>Users may compete with higher fee rates.</td>
+    </tr>
+    <tr>
+        <td>Many transactions waiting</td>
+        <td>Some transactions may wait longer.</td>
+    </tr>
+</table>
+
+<p>There is no single fixed Bitcoin transaction fee. The fee depends on the transaction and the conditions of the network.</p>
+
+<h2>5. What does sat/vB mean?</h2>
+
+<p>Wallets commonly show a fee rate measured in <strong>satoshis per virtual byte (sat/vB)</strong>.</p>
+
+<p>Let's break it down:</p>
+
+<ul>
+    <li><strong>Satoshi:</strong> The smallest unit of bitcoin. One BTC equals 100 million satoshis.</li>
+    <li><strong>Virtual byte (vB):</strong> A unit used to measure the size of a Bitcoin transaction for fee calculation.</li>
+    <li><strong>sat/vB:</strong> The number of satoshis paid for each virtual byte.</li>
+</ul>
+
+<div class="example">
+    <strong class="orange">Example calculation</strong>
+
+    <p>Imagine a transaction has:</p>
+    <ul>
+        <li>Transaction size: 200 vB</li>
+        <li>Fee rate: 10 sat/vB</li>
+    </ul>
+
+    <p>Calculation:</p>
+    <p><strong>200 × 10 = 2,000 satoshis</strong></p>
+
+    <p>The transaction fee would be 2,000 satoshis, which equals 0.00002000 BTC.</p>
+</div>
+
+<p>This is an educational example, not a live fee recommendation.</p>
+
+<h2>6. Why does transaction size matter?</h2>
+
+<p>Bitcoin fees are generally calculated using transaction size and fee rate, not simply the amount of bitcoin being sent.</p>
+
+<p>For example, sending 0.001 BTC does not automatically cost less than sending 1 BTC.</p>
+
+<p>The transaction's size in virtual bytes and the chosen fee rate are important factors.</p>
+
+<div class="example">
+    <strong>Imagine two transactions:</strong>
+    <p>Transaction A sends 0.001 BTC and uses 200 vB.</p>
+    <p>Transaction B sends 1 BTC and also uses 200 vB.</p>
+    <p>If both pay 10 sat/vB, each pays a fee of 2,000 satoshis.</p>
+</div>
+
+<h2>7. What is the mempool?</h2>
+
+<p>The mempool is a waiting area for unconfirmed transactions that individual Bitcoin nodes have received and accepted for relay.</p>
+
+<p>When you broadcast a transaction, it may enter the mempool before a miner includes it in a block.</p>
+
+<p>Miners can examine available transactions and choose which ones to include. Transactions offering higher fee rates may be more attractive, although miners can use different selection strategies.</p>
+
+<p>Each node maintains its own mempool, so the contents are not necessarily identical everywhere.</p>
+
+<h2>8. Does paying a higher fee guarantee faster confirmation?</h2>
+
+<p>No. A higher fee rate can make a transaction more attractive to miners, but it does not guarantee confirmation in the next block or at an exact time.</p>
+
+<p>Block production is not perfectly predictable, and miners make their own transaction-selection decisions.</p>
+
+<p>Network demand can also change while your transaction is waiting.</p>
+
+<div class="lesson-box">
+    <h3 class="orange">Important</h3>
+    <p>Do not assume that paying a very high fee guarantees an immediate confirmation.</p>
+</div>
+
+<h2>9. How can you avoid overpaying?</h2>
+
+<ol class="steps">
+    <li>Use a reputable Bitcoin wallet.</li>
+    <li>Check the wallet's fee estimate before approving a transaction.</li>
+    <li>Understand the difference between a fee amount and a fee rate.</li>
+    <li>Consider whether the payment needs to be confirmed quickly.</li>
+    <li>Review the final fee shown by your wallet before signing.</li>
+    <li>Learn whether your wallet supports fee replacement or other ways to handle a delayed transaction.</li>
+</ol>
+
+<p>Do not blindly copy fee recommendations from random websites. Fee estimates change with network conditions.</p>
+
+<h2>10. What happens to fees over time?</h2>
+
+<p>Bitcoin's block subsidy is reduced through scheduled halvings. Transaction fees are a separate source of miner revenue.</p>
+
+<p>As the subsidy decreases over many years, transaction fees are expected to play an increasingly important role in miner incentives.</p>
+
+<p>How this develops will depend on future demand for block space, fees and the Bitcoin network's economic activity. The exact future cannot be guaranteed.</p>
+
+<h2>Test your knowledge</h2>
+
+<div class="quiz">
+
+<form id="quizForm">
+
+<div class="question">
+<strong>1. Who collects the transaction fees in a successfully mined block?</strong>
+<label><input type="radio" name="q1" value="a"> Banks</label>
+<label><input type="radio" name="q1" value="b"> The miner who creates the block</label>
+<label><input type="radio" name="q1" value="c"> Bitcoin wallet developers</label>
+</div>
+
+<div class="question">
+<strong>2. What does sat/vB measure?</strong>
+<label><input type="radio" name="q2" value="a"> Satoshis paid per virtual byte</label>
+<label><input type="radio" name="q2" value="b"> The total number of bitcoins mined</label>
+<label><input type="radio" name="q2" value="c"> The price of one bitcoin</label>
+</div>
+
+<div class="question">
+<strong>3. What can happen when demand for block space increases?</strong>
+<label><input type="radio" name="q3" value="a"> Bitcoin's supply increases</label>
+<label><input type="radio" name="q3" value="b"> All transactions become free</label>
+<label><input type="radio" name="q3" value="c"> Users may compete with higher fee rates</label>
+</div>
+
+<div class="question">
+<strong>4. Does paying a higher fee guarantee confirmation in the next block?</strong>
+<label><input type="radio" name="q4" value="a"> Yes, always</label>
+<label><input type="radio" name="q4" value="b"> No, it does not guarantee an exact confirmation time</label>
+<label><input type="radio" name="q4" value="c"> Yes, if the transaction is large</label>
+</div>
+
+<button type="button" onclick="checkQuiz()">Check my answers</button>
+
+</form>
+
+<p id="result" aria-live="polite"></p>
+
+</div>
+
+<div class="lesson-box">
+<h2 class="orange">Final thought</h2>
+
+<p>Bitcoin transaction fees are part of how the network allocates limited block space and incentivises miners.</p>
+
+<p>Understanding sat/vB, transaction size and the mempool helps you make more informed decisions when sending bitcoin.</p>
+
+<p>Remember: verify the fee before approving your transaction, and never assume that a higher fee guarantees an exact confirmation time.</p>
+</div>
+
+<p><a href="index.html" class="orange">← Back to Bitcoin Journey</a></p>
+
+</main>
+
+<footer>
+Bitcoin Journey — Learn Bitcoin step by step.
+</footer>
+
+<script>
+function checkQuiz() {
+    const answers = {
+        q1: "b",
+        q2: "a",
+        q3: "c",
+        q4: "b"
+    };
+
+    let score = 0;
+
+    for (const question in answers) {
+        const selected = document.querySelector(
+            'input[name="' + question + '"]:checked'
+        );
+
+        if (selected && selected.value === answers[question]) {
+            score++;
+        }
+    }
+
+    const result = document.getElementById("result");
+
+    if (score === 4) {
+        result.textContent =
+            "Excellent! You got all 4 answers correct!";
+    } else {
+        result.textContent =
+            "You scored " + score + " out of 4. Review the lesson and try again.";
+    }
+}
+</script>
+
+</body>
+</html>
