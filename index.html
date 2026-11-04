@@ -404,6 +404,7 @@ footer {
             <a href="#home">Home</a>
             <a href="#tools">Tools</a>
             <a href="#learn">Learn</a>
+            <a href="#support">Support</a>
             <a href="#about">About</a>
         </nav>
     </div>
@@ -623,46 +624,102 @@ footer {
 </div>
 </div>
 </section>
-<section class="about" id="support">
-    <div class="eyebrow">Support independent education</div>
-    <h2>Support Bitcoin Journey</h2>
+<section class="support-section" id="support">
 
-    <p class="muted">
-        If you find these free lessons useful, you can support
-        this educational project with Bitcoin.
-        Every contribution helps us keep learning resources available.
-    </p>
-
-    <h3>⚡ Donate with Lightning</h3>
-    <p class="muted">
-        Use a Lightning wallet that supports BOLT12 offers.
-    </p>
+    <h2>Support Bitcoin Journey 🟠</h2>
 
     <p>
-        <a class="button"
-           href="lightning:lno1pgqppmsrse80qf0aara4slvcjxrvu6j2rp5ftmjy4yntlsmsutpkvkt6878s8ne35ujdwlezuxr60wwzerywyhvhgq3x5waqwp57tfrw7qrquk35qgpvvktwpkmqf30flqh99j8v5u4ju8m6nsdyz4a7nk0egqyet70mj7cqxdgtmk9xf3yenh4jnjpgvjdftp34xh5568a2w9fkqylhsravl33vv9mw3pqn2z8cuyd0pc8j9csjywkkavnqxztaahvft67qmm5l697mhn9zjammjepwuggl2wd8y9qmqhrayfwuqqexv9cm26358u2preg6gcmeszg00dlxwfjqltmfcjuxg7x4cwkdaj6uxk8sw83nygtmnx54raypeygscacq
- Copy Phoenix offer
-           Open Lightning Offer
-        </a>
+        If you find these lessons useful, you can support
+        Bitcoin education by sending Bitcoin directly.
     </p>
 
-    <h3>₿ Donate with On-chain Bitcoin</h3>
-    <p class="muted">
-        You can also send Bitcoin directly to this address:
-    </p>
+    <div class="support-grid">
 
-    <div class="result">
-        <p style="overflow-wrap:anywhere;">
-            bc1px6gpkldgt5gmqhjls4qdlwn637mv7nx0e7ae5398j4rp9jg036lsrp39rn
-        </p>
+        <div class="support-card">
+
+            <h3>⚡ Lightning Network</h3>
+
+            <p>Fast Bitcoin payments using Lightning.</p>
+
+            <div class="support-qr" id="lightning-qr"></div>
+
+            <div class="support-address" id="lightning-address">
+                lno1pgqppmsrse80qf0aara4slvcjxrvu6j2rp5ftmjy4yntlsmsutpkvkt6878s8ne35ujdwlezuxr60wwzerywyhvhgq3x5waqwp57tfrw7qrquk35qgpvvktwpkmqf30flqh99j8v5u4ju8m6nsdyz4a7nk0egqyet70mj7cqxdgtmk9xf3yenh4jnjpgvjdftp34xh5568a2w9fkqylhsravl33vv9mw3pqn2z8cuyd0pc8j9csjywkkavnqxztaahvft67qmm5l697mhn9zjammjepwuggl2wd8y9qmqhrayfwuqqexv9cm26358u2preg6gcmeszg00dlxwfjqltmfcjuxg7x4cwkdaj6uxk8sw83nygtmnx54raypeygscacq
+            </div>
+
+            <button class="support-button"
+                onclick="copyPayment('lightning-address')">
+                Copy Lightning Offer
+            </button>
+
+        </div>
+
+        <div class="support-card">
+
+            <h3>₿ Bitcoin On-chain</h3>
+
+            <p>Send Bitcoin directly to the Bitcoin blockchain.</p>
+
+            <div class="support-qr" id="onchain-qr"></div>
+
+            <div class="support-address" id="onchain-address">
+                bc1px6gpkldgt5gmqhjls4qdlwn637mv7nx0e7ae5398j4rp9jg036lsrp39rn
+            </div>
+
+            <button class="support-button"
+                onclick="copyPayment('onchain-address')">
+                Copy Bitcoin Address
+            </button>
+
+        </div>
+
     </div>
 
-    <p class="note">
-        Always check the address carefully before sending.
-        Bitcoin transactions cannot normally be reversed.
-        Donations are voluntary and non-refundable.
+    <p class="support-thanks">
+        Thank you for supporting open Bitcoin education.
+        Verify, don't trust.
     </p>
+
 </section>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+
+<script>
+const lightningOffer =
+document.getElementById("lightning-address").textContent.trim();
+
+const bitcoinAddress =
+document.getElementById("onchain-address").textContent.trim();
+
+new QRCode(document.getElementById("lightning-qr"), {
+    text: lightningOffer,
+    width: 130,
+    height: 130,
+    colorDark: "#000000",
+    colorLight: "#ffffff",
+    correctLevel: QRCode.CorrectLevel.L
+});
+
+new QRCode(document.getElementById("onchain-qr"), {
+    text: "bitcoin:" + bitcoinAddress,
+    width: 130,
+    height: 130,
+    colorDark: "#000000",
+    colorLight: "#ffffff",
+    correctLevel: QRCode.CorrectLevel.M
+});
+
+function copyPayment(elementId) {
+    const text = document.getElementById(elementId).textContent.trim();
+
+    navigator.clipboard.writeText(text).then(() => {
+        alert("Payment details copied!");
+    }).catch(() => {
+        alert("Copy failed. Please select and copy the address manually.");
+    });
+}
+</script>
+
     <section class="about" id="about">
         <div class="eyebrow">About this project</div>
         <h2>Knowledge before decisions.</h2>
@@ -788,101 +845,7 @@ $("satoshiForm").requestSubmit();
 $("savingsForm").requestSubmit();
 </script>
 
-<section class="support-section">
 
-    <h2>Support Bitcoin Journey 🟠</h2>
-
-    <p>
-        If you find these lessons useful, you can support
-        Bitcoin education by sending Bitcoin directly.
-    </p>
-
-    <div class="support-grid">
-
-        <div class="support-card">
-
-            <h3>⚡ Lightning Network</h3>
-
-            <p>Fast Bitcoin payments using Lightning.</p>
-
-            <div class="support-qr" id="lightning-qr"></div>
-
-            <div class="support-address" id="lightning-address">
-                lno1pgqppmsrse80qf0aara4slvcjxrvu6j2rp5ftmjy4yntlsmsutpkvkt6878s8ne35ujdwlezuxr60wwzerywyhvhgq3x5waqwp57tfrw7qrquk35qgpvvktwpkmqf30flqh99j8v5u4ju8m6nsdyz4a7nk0egqyet70mj7cqxdgtmk9xf3yenh4jnjpgvjdftp34xh5568a2w9fkqylhsravl33vv9mw3pqn2z8cuyd0pc8j9csjywkkavnqxztaahvft67qmm5l697mhn9zjammjepwuggl2wd8y9qmqhrayfwuqqexv9cm26358u2preg6gcmeszg00dlxwfjqltmfcjuxg7x4cwkdaj6uxk8sw83nygtmnx54raypeygscacq
-            </div>
-
-            <button class="support-button"
-                onclick="copyPayment('lightning-address')">
-                Copy Lightning Offer
-            </button>
-
-        </div>
-
-        <div class="support-card">
-
-            <h3>₿ Bitcoin On-chain</h3>
-
-            <p>Send Bitcoin directly to the Bitcoin blockchain.</p>
-
-            <div class="support-qr" id="onchain-qr"></div>
-
-            <div class="support-address" id="onchain-address">
-                bc1px6gpkldgt5gmqhjls4qdlwn637mv7nx0e7ae5398j4rp9jg036lsrp39rn
-            </div>
-
-            <button class="support-button"
-                onclick="copyPayment('onchain-address')">
-                Copy Bitcoin Address
-            </button>
-
-        </div>
-
-    </div>
-
-    <p class="support-thanks">
-        Thank you for supporting open Bitcoin education.
-        Verify, don't trust.
-    </p>
-
-</section>
-
-<script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
-
-<script>
-const lightningOffer =
-document.getElementById("lightning-address").textContent.trim();
-
-const bitcoinAddress =
-document.getElementById("onchain-address").textContent.trim();
-
-new QRCode(document.getElementById("lightning-qr"), {
-    text: lightningOffer,
-    width: 130,
-    height: 130,
-    colorDark: "#000000",
-    colorLight: "#ffffff",
-    correctLevel: QRCode.CorrectLevel.L
-});
-
-new QRCode(document.getElementById("onchain-qr"), {
-    text: "bitcoin:" + bitcoinAddress,
-    width: 130,
-    height: 130,
-    colorDark: "#000000",
-    colorLight: "#ffffff",
-    correctLevel: QRCode.CorrectLevel.M
-});
-
-function copyPayment(elementId) {
-    const text = document.getElementById(elementId).textContent.trim();
-
-    navigator.clipboard.writeText(text).then(() => {
-        alert("Payment details copied!");
-    }).catch(() => {
-        alert("Copy failed. Please select and copy the address manually.");
-    });
-}
-</script>
 
 </body>
 </html>
