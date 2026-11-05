@@ -1,0 +1,146 @@
+/*
+ * Bitcoin Journey - shared language styles
+ * Used on every page (together with language.js).
+ * Part 1: the language selector.  Part 2: Arabic / right-to-left rules.
+ */
+
+/* ---------- Part 1: language selector (globe button) ---------- */
+
+.bj-lang {
+  position: relative;
+  display: inline-block;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 14px;
+  line-height: 1.2;
+  z-index: 50;
+}
+
+.bj-lang-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  min-height: 40px;
+  padding: 8px 12px;
+  color: #f4f7fb;
+  background: #0c131e;
+  border: 1px solid #2b394b;
+  border-radius: 8px;
+  cursor: pointer;
+  font: inherit;
+  transition: border-color .15s, color .15s;
+}
+
+.bj-lang-btn:hover { border-color: #f7931a; color: #f7931a; }
+.bj-lang-btn:focus-visible,
+.bj-lang-item:focus-visible { outline: 2px solid #f7931a; outline-offset: 3px; }
+.bj-lang-btn svg { flex-shrink: 0; }
+.bj-lang-code { display: none; font-weight: 700; }
+
+.bj-lang-menu {
+  position: absolute;
+  inset-inline-end: 0;
+  top: calc(100% + 6px);
+  min-width: 170px;
+  margin: 0;
+  padding: 6px;
+  list-style: none;
+  background: #111a27;
+  border: 1px solid #2b394b;
+  border-radius: 10px;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, .45);
+}
+
+.bj-lang-menu[hidden] { display: none; }
+
+.bj-lang-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 14px;
+  width: 100%;
+  min-height: 44px;
+  padding: 9px 12px;
+  color: #f4f7fb;
+  background: transparent;
+  border: 0;
+  border-radius: 7px;
+  cursor: pointer;
+  font: inherit;
+  font-size: 15px;
+  text-align: start;
+}
+
+.bj-lang-item:hover { background: #1b2a3f; }
+.bj-lang-item[aria-checked="true"] { color: #f7931a; font-weight: 700; }
+.bj-lang-item[aria-checked="true"]::after { content: "\2713"; }
+
+/* Lesson pages: selector sits at the end of the existing header bar */
+.bj-lang--lesson {
+  position: absolute;
+  inset-inline-end: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+/* Pages with no header bar get a slim one */
+.bj-lang-bar {
+  display: flex;
+  justify-content: flex-end;
+  padding: 10px 16px;
+  background: #111c30;
+  border-bottom: 1px solid #26354d;
+}
+
+/* Hide the page for a split second while Arabic loads (prevents English flash) */
+html.bj-loading body { opacity: 0; }
+
+/* Homepage: keep the selector next to the logo on phones */
+@media (max-width: 600px) {
+  .nav { flex-direction: row; flex-wrap: wrap; align-items: center; }
+  .nav nav { order: 3; flex-basis: 100%; }
+  #bj-lang-slot { margin-inline-start: auto; }
+}
+
+@media (max-width: 560px) {
+  .bj-lang-name { display: none; }
+  .bj-lang-code { display: inline; }
+  .bj-lang--lesson {
+    position: static;
+    transform: none;
+    display: flex;
+    justify-content: center;
+    margin-top: 12px;
+  }
+  .bj-lang--lesson .bj-lang-menu { inset-inline-end: auto; inset-inline-start: 50%; transform: translateX(-50%); }
+  [dir="rtl"] .bj-lang--lesson .bj-lang-menu { transform: translateX(50%); }
+}
+
+/* ---------- Part 2: Arabic / right-to-left ---------- */
+
+/* Arabic letters join together, so letter-spacing must be zero */
+html[dir="rtl"] * { letter-spacing: 0 !important; }
+
+/* A font with good Arabic letters, and roomier lines for comfortable reading */
+html[lang="ar"] body {
+  font-family: "Segoe UI", Tahoma, "Noto Naskh Arabic", "Noto Sans Arabic", Arial, sans-serif;
+  line-height: 1.9;
+}
+html[lang="ar"] h1,
+html[lang="ar"] h2,
+html[lang="ar"] h3 { line-height: 1.5; }
+html[lang="ar"] .coin { line-height: 1; }
+
+/* Number boxes: digits always read left-to-right, but sit at the right edge */
+html[dir="rtl"] input[type="number"] { direction: ltr; text-align: right; }
+
+/* Payment addresses must stay exactly as they are, left-to-right */
+.support-address { direction: ltr; unicode-bidi: isolate; }
+
+/* Calculator results mix words and numbers; keep numbers tidy */
+html[dir="rtl"] .result strong { unicode-bidi: isolate; }
+
+/* The logo is a Latin brand name: keep it exactly the same in every language */
+.brand, footer strong.orange { direction: ltr; unicode-bidi: isolate; }
+
+/* Small orange labels are easier to read in Arabic when slightly larger */
+html[lang="ar"] .eyebrow { font-size: 14px; }
