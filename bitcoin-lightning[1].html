@@ -1,0 +1,402 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Bitcoin Lightning Network | Bitcoin Journey</title>
+<style>
+* { box-sizing: border-box; }
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #08111f;
+    color: #e8edf5;
+    line-height: 1.7;
+}
+header {
+    padding: 22px 8%;
+    background: #101d30;
+    border-bottom: 1px solid #26364d;
+}
+header a {
+    color: #ff9d36;
+    text-decoration: none;
+    font-weight: bold;
+}
+main {
+    max-width: 850px;
+    margin: 45px auto;
+    padding: 0 22px;
+}
+h1, h2 { line-height: 1.3; }
+h1 { font-size: 38px; }
+h2 { color: #ff9d36; margin-top: 35px; }
+p, li { color: #c4cede; }
+.orange { color: #ff9d36; }
+.card {
+    background: #101d30;
+    border: 1px solid #26364d;
+    border-radius: 12px;
+    padding: 22px;
+    margin: 22px 0;
+}
+.diagram {
+    background: #15243a;
+    border: 1px solid #35465e;
+    border-radius: 10px;
+    padding: 18px;
+    text-align: center;
+    margin: 20px 0;
+}
+.diagram strong { color: #ff9d36; }
+.arrow {
+    color: #ff9d36;
+    font-size: 23px;
+    font-weight: bold;
+}
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 18px 0;
+}
+th, td {
+    padding: 12px;
+    border: 1px solid #35465e;
+    text-align: left;
+}
+th {
+    color: #ff9d36;
+    background: #15243a;
+}
+button {
+    background: #ff9d36;
+    color: #08111f;
+    border: 0;
+    padding: 12px 20px;
+    border-radius: 7px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 12px;
+}
+button:hover { background: #ffb45f; }
+.question { margin: 22px 0; }
+label {
+    display: block;
+    margin: 8px 0;
+    color: #c4cede;
+    cursor: pointer;
+}
+#result {
+    font-weight: bold;
+    margin-top: 18px;
+}
+footer {
+    text-align: center;
+    padding: 30px;
+    color: #8292a8;
+}
+@media(max-width:600px) {
+    h1 { font-size: 29px; }
+    table { font-size: 13px; }
+    th, td { padding: 8px; }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <a href="index.html">BITCOIN JOURNEY</a>
+</header>
+
+<main>
+
+<p class="orange">LESSON 14 · BITCOIN SCALING</p>
+
+<h1>The Bitcoin Lightning Network</h1>
+
+<p>
+Bitcoin allows people to transfer value without depending on a
+traditional bank. But what happens when many people want to make
+small payments quickly?
+</p>
+
+<p>
+The Lightning Network is a system designed to make Bitcoin payments
+faster and more suitable for frequent, smaller transactions.
+</p>
+
+<div class="card">
+    <h2>1. What is the Lightning Network?</h2>
+
+    <p>
+    The Lightning Network is a payment network built on top of Bitcoin.
+    It allows participants to make payments through payment channels
+    without recording every individual payment directly on the Bitcoin
+    blockchain.
+    </p>
+
+    <p>
+    The Bitcoin blockchain is often called Layer 1. Lightning is commonly
+    described as a Layer 2 system because it uses Bitcoin's blockchain
+    as its underlying settlement system.
+    </p>
+
+    <p>
+    Lightning does not replace Bitcoin. It uses Bitcoin to establish
+    and settle payment channels.
+    </p>
+</div>
+
+<div class="card">
+    <h2>2. What is a payment channel?</h2>
+
+    <p>
+    Imagine two people, Alice and Bob, who want to make payments to
+    each other regularly.
+    </p>
+
+    <p>
+    Instead of making a separate on-chain transaction for every
+    payment, they can open a payment channel.
+    </p>
+
+    <div class="diagram">
+        <strong>ALICE</strong>
+        <div class="arrow">↕</div>
+        <strong>LIGHTNING PAYMENT CHANNEL</strong>
+        <div class="arrow">↕</div>
+        <strong>BOB</strong>
+    </div>
+
+    <p>
+    Opening a channel normally involves a Bitcoin on-chain transaction
+    that locks funds into a channel.
+    </p>
+
+    <p>
+    While the channel is open, Alice and Bob can update their balances
+    through Lightning payments. These updates do not each require a
+    new Bitcoin blockchain transaction.
+    </p>
+
+    <p>
+    When the channel closes, its final settlement can be recorded on
+    the Bitcoin blockchain.
+    </p>
+</div>
+
+<div class="card">
+    <h2>3. How does a Lightning payment travel?</h2>
+
+    <p>
+    Lightning payments can travel through connected payment channels.
+    You do not necessarily need a direct channel with the person
+    receiving your payment.
+    </p>
+
+    <div class="diagram">
+        <strong>ALICE</strong>
+        <div class="arrow">↓</div>
+        <strong>BOB</strong>
+        <div class="arrow">↓</div>
+        <strong>CAROL</strong>
+        <div class="arrow">↓</div>
+        <strong>DAN</strong>
+        <p>Example route: Alice pays Dan through connected channels.</p>
+    </div>
+
+    <p>
+    In this simplified example, Alice sends a payment to Dan through
+    Bob and Carol. The Lightning Network searches for a suitable route
+    with enough available channel liquidity.
+    </p>
+
+    <p>
+    Actual Lightning payments use cryptographic mechanisms called
+    Hashed Time-Locked Contracts (HTLCs), or newer mechanisms such as
+    Point Time-Locked Contracts (PTLCs) where supported.
+    These mechanisms help make routed payments conditional and protect
+    participants against certain payment risks.
+    </p>
+</div>
+
+<div class="card">
+    <h2>4. On-chain Bitcoin vs Lightning</h2>
+
+    <table>
+        <tr>
+            <th>Feature</th>
+            <th>Bitcoin on-chain</th>
+            <th>Lightning</th>
+        </tr>
+        <tr>
+            <td>Where payments happen</td>
+            <td>Bitcoin blockchain</td>
+            <td>Payment channels</td>
+        </tr>
+        <tr>
+            <td>Typical speed</td>
+            <td>Depends on block confirmation</td>
+            <td>Usually very fast</td>
+        </tr>
+        <tr>
+            <td>Fees</td>
+            <td>Miner transaction fees</td>
+            <td>Routing fees may apply</td>
+        </tr>
+        <tr>
+            <td>Best suited for</td>
+            <td>Direct blockchain settlement</td>
+            <td>Frequent smaller payments</td>
+        </tr>
+        <tr>
+            <td>Settlement</td>
+            <td>Recorded on-chain</td>
+            <td>Channel updates, with on-chain settlement when needed</td>
+        </tr>
+    </table>
+
+    <p>
+    Lightning payments are often faster and cheaper, but fees and
+    performance depend on network conditions, routing and channel
+    liquidity. They are not guaranteed to be free.
+    </p>
+</div>
+
+<div class="card">
+    <h2>5. Why is Lightning useful?</h2>
+
+    <ul>
+        <li><strong>Speed:</strong> Payments can usually complete in seconds.</li>
+        <li><strong>Smaller payments:</strong> It can make small Bitcoin payments more practical.</li>
+        <li><strong>Lower fees:</strong> Routing fees can be small, although they vary.</li>
+        <li><strong>More payment capacity:</strong> It can support many payments without putting each one directly on the blockchain.</li>
+        <li><strong>Global access:</strong> People can use Lightning across borders where they have suitable access to the network.</li>
+    </ul>
+</div>
+
+<div class="card">
+    <h2>6. What are the risks and limitations?</h2>
+
+    <p>Lightning is useful, but it is not perfect.</p>
+
+    <ul>
+        <li><strong>Liquidity:</strong> A payment route needs enough available liquidity in the right direction.</li>
+        <li><strong>Online availability:</strong> Some wallet and node setups need to be online to manage payments and channel activity.</li>
+        <li><strong>Channel management:</strong> Opening, closing and maintaining channels can require technical knowledge or fees.</li>
+        <li><strong>Wallet security:</strong> Users still need to protect their keys and backups.</li>
+        <li><strong>Wallet providers:</strong> Some services use custodial arrangements, meaning the provider controls the funds or keys.</li>
+    </ul>
+
+    <p>
+    A custodial Lightning wallet is not the same as holding your own
+    private keys. Understand who controls the funds before using a service.
+    </p>
+</div>
+
+<div class="card">
+    <h2>7. How does Lightning connect to Bitcoin?</h2>
+
+    <p>
+    Bitcoin provides the underlying blockchain and settlement rules.
+    Lightning uses payment channels to move value between participants
+    more frequently.
+    </p>
+
+    <p>
+    Think of the Bitcoin blockchain as the foundation and Lightning
+    as a payment system built on top of that foundation.
+    </p>
+
+    <p>
+    The two systems work together. Lightning depends on Bitcoin for
+    channel funding and settlement.
+    </p>
+</div>
+
+<div class="card">
+    <h2>8. Test your knowledge</h2>
+
+    <p>Choose one answer for each question.</p>
+
+    <form id="quiz">
+
+        <div class="question">
+            <p><strong>1. What is the Lightning Network?</strong></p>
+            <label><input type="radio" name="q1" value="a"> A traditional bank</label>
+            <label><input type="radio" name="q1" value="b"> A payment network built on top of Bitcoin</label>
+            <label><input type="radio" name="q1" value="c"> A new type of mining machine</label>
+        </div>
+
+        <div class="question">
+            <p><strong>2. What is a payment channel?</strong></p>
+            <label><input type="radio" name="q2" value="a"> A way for participants to make multiple payments without putting each one on-chain</label>
+            <label><input type="radio" name="q2" value="b"> A bank account</label>
+            <label><input type="radio" name="q2" value="c"> A Bitcoin mining pool</label>
+        </div>
+
+        <div class="question">
+            <p><strong>3. What can happen when a Lightning channel closes?</strong></p>
+            <label><input type="radio" name="q3" value="a"> Bitcoin disappears</label>
+            <label><input type="radio" name="q3" value="b"> The channel can settle on the Bitcoin blockchain</label>
+            <label><input type="radio" name="q3" value="c"> The internet stops working</label>
+        </div>
+
+        <div class="question">
+            <p><strong>4. What is one limitation of Lightning?</strong></p>
+            <label><input type="radio" name="q4" value="a"> It has no connection to Bitcoin</label>
+            <label><input type="radio" name="q4" value="b"> It cannot transfer value</label>
+            <label><input type="radio" name="q4" value="c"> Payments can require sufficient channel liquidity</label>
+        </div>
+
+        <button type="button" onclick="checkQuiz()">Check my answers</button>
+
+    </form>
+
+    <p id="result"></p>
+</div>
+
+<p><a href="index.html">← Back to Bitcoin Journey homepage</a></p>
+
+</main>
+
+<footer>
+    Bitcoin Journey · Learn Bitcoin step by step
+</footer>
+
+<script>
+function checkQuiz() {
+    const answers = {
+        q1: "b",
+        q2: "a",
+        q3: "b",
+        q4: "c"
+    };
+
+    let score = 0;
+
+    for (const question in answers) {
+        const selected = document.querySelector(
+            'input[name="' + question + '"]:checked'
+        );
+
+        if (selected && selected.value === answers[question]) {
+            score++;
+        }
+    }
+
+    const result = document.getElementById("result");
+    result.textContent = "You scored " + score + " out of 4.";
+
+    if (score === 4) {
+        result.textContent += " Excellent work! You understand the Lightning Network.";
+    } else {
+        result.textContent += " Review the lesson and try again.";
+    }
+}
+</script>
+
+</body>
+</html>
