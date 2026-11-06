@@ -166,9 +166,19 @@
     var key = norm(raw);
     if (!key || !hasLetters(key)) return;
     var out = lookup(key);
-    if (out === null) { noteMissing(key); return; }
     var lead = /^\s*/.exec(raw)[0];
     var trail = /\s*$/.exec(raw)[0];
+    if (out === null) {
+      // Amounts such as "50 BTC" are not translated, but must keep reading left-to-right
+      if (/\d/.test(key) && isIgnorable(key)) {
+        var wrapped = lead + "\u2066" + key + "\u2069" + trail;
+        registry.push({ kind: "text", node: node, en: raw, ar: wrapped });
+        node.nodeValue = wrapped;
+      } else {
+        noteMissing(key);
+      }
+      return;
+    }
     var finalText = lead + out + trail;
     if (finalText === raw) return;
     registry.push({ kind: "text", node: node, en: raw, ar: finalText });
