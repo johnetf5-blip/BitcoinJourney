@@ -1,0 +1,284 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lesson 5: Bitcoin Nodes | Bitcoin Journey</title>
+<style>
+* { box-sizing: border-box; }
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #0b1220;
+    color: #e8edf5;
+    line-height: 1.7;
+}
+header {
+    padding: 22px 7%;
+    border-bottom: 1px solid #263449;
+}
+header a, .back { color: #f7931a; text-decoration: none; }
+main { max-width: 850px; margin: 45px auto; padding: 0 22px; }
+h1, h2 { line-height: 1.3; }
+h1 { font-size: 38px; }
+h2 { color: #f7931a; }
+.orange { color: #f7931a; }
+.card {
+    background: #131f32;
+    border: 1px solid #293a52;
+    border-radius: 12px;
+    padding: 22px;
+    margin: 20px 0;
+}
+.highlight { border-inline-start: 4px solid #f7931a; }
+li { margin-bottom: 10px; }
+button {
+    background: #f7931a;
+    color: #101827;
+    border: 0;
+    padding: 12px 20px;
+    border-radius: 7px;
+    font-weight: bold;
+    cursor: pointer;
+}
+.question { margin: 22px 0; }
+label { display: block; margin: 8px 0; cursor: pointer; }
+#result { margin-top: 20px; font-weight: bold; }
+.back { display: inline-block; margin: 35px 0; }
+footer {
+    border-top: 1px solid #263449;
+    text-align: center;
+    padding: 25px;
+    color: #9aa9bd;
+}
+</style>
+<link rel="stylesheet" href="language.css">
+<script src="language.js"></script>
+</head>
+<body>
+
+<header>
+    <a href="index.html">← Bitcoin Journey</a>
+</header>
+
+<main>
+    <p class="orange">BITCOIN JOURNEY · LESSON 5</p>
+    <h1>What Are <span class="orange">Bitcoin Nodes?</span></h1>
+
+    <p>
+        Bitcoin nodes are computers that participate in the Bitcoin
+        network. They independently check transactions and blocks
+        against Bitcoin's consensus rules.
+    </p>
+
+    <div class="card">
+        <h2>1. What is a Bitcoin node?</h2>
+        <p>
+            A Bitcoin node is software running on a computer that
+            communicates with other computers in the Bitcoin network.
+        </p>
+        <p>
+            A full node downloads and verifies blocks and transactions.
+            It checks whether they follow the rules of Bitcoin.
+        </p>
+        <p>
+            A full node does not need permission from a bank, miner
+            or exchange to perform these checks.
+        </p>
+    </div>
+
+    <div class="card">
+        <h2>2. What does a node actually do?</h2>
+        <ul>
+            <li>Receives transactions from the network.</li>
+            <li>Checks whether transactions are valid.</li>
+            <li>Receives new blocks.</li>
+            <li>Checks the transactions inside each block.</li>
+            <li>Checks that the block follows consensus rules.</li>
+            <li>Shares valid information with other connected nodes.</li>
+        </ul>
+        <p>
+            A full node independently verifies the rules rather than
+            simply accepting a miner's claim that a block is valid.
+        </p>
+    </div>
+
+    <div class="card">
+        <h2>3. Miners versus nodes</h2>
+        <p>
+            Miners and nodes have different responsibilities.
+            They work together, but they are not the same thing.
+        </p>
+        <div class="card highlight">
+            <strong class="orange">Miners</strong>
+            <p>
+                Use computing power to perform Proof of Work and
+                propose new blocks.
+            </p>
+        </div>
+        <div class="card highlight">
+            <strong class="orange">Full nodes</strong>
+            <p>
+                Independently check blocks and transactions against
+                the Bitcoin consensus rules.
+            </p>
+        </div>
+        <p>
+            A miner can propose a block, but full nodes can reject it
+            if it breaks the rules.
+        </p>
+    </div>
+
+    <div class="card">
+        <h2>4. How do nodes protect the 21 million limit?</h2>
+        <p>
+            Bitcoin's consensus rules determine how many new bitcoins
+            can be issued in each block.
+        </p>
+        <p>
+            Full nodes check that miners do not claim more block
+            subsidy than the rules allow.
+        </p>
+        <p>
+            If a miner creates a block that violates the permitted
+            subsidy, a validating node rejects that block.
+        </p>
+        <div class="card highlight">
+            <strong class="orange">Important idea</strong>
+            <p>
+                Mining does not give miners permission to change
+                Bitcoin's monetary rules. Full nodes independently
+                verify the blocks they receive.
+            </p>
+        </div>
+    </div>
+
+    <div class="card">
+        <h2>5. What does "verify, don't trust" mean?</h2>
+        <p>
+            The idea is simple: instead of depending entirely on
+            someone else's word, use your own software to check
+            the information.
+        </p>
+        <p>
+            For example, an exchange might tell you that a Bitcoin
+            transaction has been confirmed. With your own full node,
+            you can independently check the blockchain.
+        </p>
+        <p>
+            Running a node gives you more independent verification.
+            It does not guarantee that every wallet or computer
+            connected to it is secure.
+        </p>
+    </div>
+
+    <div class="card">
+        <h2>6. Can you run your own Bitcoin node?</h2>
+        <p>
+            Yes. Anyone with suitable computer hardware, storage
+            and an internet connection can run Bitcoin node software.
+        </p>
+        <p>Examples of node software include:</p>
+        <ul>
+            <li>Bitcoin Core</li>
+            <li>Bitcoin Knots</li>
+        </ul>
+        <p>
+            A node needs time and storage to download and verify
+            blockchain data. You can also configure a pruned node
+            to use less storage.
+        </p>
+        <p>
+            Running a node does not automatically earn you Bitcoin.
+            It is mainly about independently verifying the network.
+        </p>
+    </div>
+
+    <div class="card">
+        <h2>Knowledge check</h2>
+        <p>Choose the best answer for each question.</p>
+
+        <form id="quiz">
+            <div class="question">
+                <strong>1. What is the main job of a full node?</strong>
+                <label><input type="radio" name="q1" value="a"> To print money</label>
+                <label><input type="radio" name="q1" value="b"> To independently verify transactions and blocks</label>
+                <label><input type="radio" name="q1" value="c"> To control all miners</label>
+            </div>
+
+            <div class="question">
+                <strong>2. What is the main difference between miners and nodes?</strong>
+                <label><input type="radio" name="q2" value="a"> Miners propose blocks; nodes verify them</label>
+                <label><input type="radio" name="q2" value="b"> They are exactly the same</label>
+                <label><input type="radio" name="q2" value="c"> Nodes create unlimited Bitcoin</label>
+            </div>
+
+            <div class="question">
+                <strong>3. Can a full node reject an invalid block?</strong>
+                <label><input type="radio" name="q3" value="a"> No, miners decide everything</label>
+                <label><input type="radio" name="q3" value="b"> Only a bank can reject it</label>
+                <label><input type="radio" name="q3" value="c"> Yes, if it breaks consensus rules</label>
+            </div>
+
+            <div class="question">
+                <strong>4. Does running a node automatically earn Bitcoin?</strong>
+                <label><input type="radio" name="q4" value="a"> Yes, every day</label>
+                <label><input type="radio" name="q4" value="b"> No, it mainly provides independent verification</label>
+                <label><input type="radio" name="q4" value="c"> Yes, whenever it receives a transaction</label>
+            </div>
+
+            <button type="button" onclick="checkQuiz()">Check my answers</button>
+        </form>
+
+        <p id="result"></p>
+    </div>
+
+    <a class="back" href="index.html">← Return to Bitcoin Journey</a>
+</main>
+
+<footer>
+    Bitcoin Journey · Learn Bitcoin step by step
+</footer>
+
+<script>
+function checkQuiz() {
+    const answers = {
+        q1: "b",
+        q2: "a",
+        q3: "c",
+        q4: "b"
+    };
+
+    let score = 0;
+    let unanswered = false;
+
+    for (const question in answers) {
+        const selected = document.querySelector(
+            'input[name="' + question + '"]:checked'
+        );
+
+        if (!selected) {
+            unanswered = true;
+        } else if (selected.value === answers[question]) {
+            score++;
+        }
+    }
+
+    const result = document.getElementById("result");
+
+    if (unanswered) {
+        result.textContent = "Please answer all four questions first.";
+        return;
+    }
+
+    result.textContent =
+        "You scored " + score + " out of 4. " +
+        (score === 4
+            ? "Excellent work! You understand the basics of Bitcoin nodes."
+            : "Good effort! Review the lesson and try again.");
+}
+</script>
+
+</body>
+</html>
