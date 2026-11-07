@@ -1,0 +1,526 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bitcoin Addresses | Bitcoin Journey</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #0b1220;
+            color: #e8edf5;
+            line-height: 1.7;
+        }
+
+        header {
+            padding: 22px 8%;
+            border-bottom: 1px solid #263247;
+        }
+
+        header a {
+            color: #f7931a;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        main {
+            max-width: 850px;
+            margin: 45px auto;
+            padding: 0 22px;
+        }
+
+        .tag {
+            color: #f7931a;
+            font-weight: bold;
+            letter-spacing: 2px;
+        }
+
+        h1, h2 {
+            color: #ffffff;
+            line-height: 1.3;
+        }
+
+        h1 {
+            font-size: 38px;
+        }
+
+        h2 {
+            margin-top: 35px;
+        }
+
+        .intro, .lesson-box, .quiz {
+            background: #151f30;
+            border: 1px solid #29364b;
+            border-radius: 12px;
+            padding: 22px;
+            margin: 22px 0;
+        }
+
+        .orange {
+            color: #f7931a;
+        }
+
+        .example {
+            background: #202d40;
+            padding: 15px;
+            border-inline-start: 4px solid #f7931a;
+            margin: 18px 0;
+            overflow-wrap: anywhere;
+        }
+
+        .address-example {
+            display: block;
+            font-family: monospace;
+            color: #f7931a;
+            font-size: 15px;
+            margin-top: 10px;
+            overflow-wrap: anywhere;
+        }
+
+        .steps {
+            padding-inline-start: 25px;
+        }
+
+        .steps li {
+            margin-bottom: 12px;
+        }
+
+        button {
+            background: #f7931a;
+            color: #111827;
+            border: none;
+            border-radius: 7px;
+            padding: 12px 20px;
+            font-weight: bold;
+            cursor: pointer;
+            margin-top: 12px;
+        }
+
+        button:hover {
+            background: #ffad42;
+        }
+
+        .question {
+            border-bottom: 1px solid #29364b;
+            padding: 15px 0;
+        }
+
+        .question label {
+            display: block;
+            margin: 8px 0;
+            cursor: pointer;
+        }
+
+        #result {
+            font-weight: bold;
+            margin-top: 18px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 30px;
+            color: #9ba9bd;
+            border-top: 1px solid #263247;
+            margin-top: 50px;
+        }
+
+        @media (max-width: 600px) {
+            h1 {
+                font-size: 30px;
+            }
+
+            main {
+                margin-top: 25px;
+            }
+        }
+    </style>
+<link rel="stylesheet" href="language.css">
+<script src="language.js"></script>
+</head>
+
+<body>
+
+<header>
+    <a href="index.html">← Bitcoin Journey Home</a>
+</header>
+
+<main>
+
+    <p class="tag">BITCOIN EDUCATION — LESSON 9</p>
+
+    <h1>Bitcoin Addresses: <span class="orange">How to Receive Bitcoin</span></h1>
+
+    <div class="intro">
+        <p>
+            If someone wants to send you bitcoin, they need
+            a destination. In Bitcoin, this is usually a
+            Bitcoin address.
+        </p>
+
+        <p>
+            Addresses make it possible to receive bitcoin
+            without sharing your private keys.
+        </p>
+
+        <p>
+            Let's understand how addresses work, where they
+            come from and how to use them safely.
+        </p>
+    </div>
+
+    <h2>1. What is a Bitcoin address?</h2>
+
+    <p>
+        A Bitcoin address is an identifier that can be used
+        as a destination for a Bitcoin payment.
+    </p>
+
+    <p>
+        Your wallet creates addresses using cryptographic
+        information derived from your wallet's keys.
+    </p>
+
+    <div class="example">
+        <strong>Example of a Bitcoin address:</strong>
+        <span class="address-example">
+            bc1qexampleaddress000000000000000000000000
+        </span>
+        <p>
+            This is an invented example for learning.
+            It is not a real address and must not be used
+            to send bitcoin.
+        </p>
+    </div>
+
+    <p>
+        A Bitcoin address is not your private key.
+        You can share a receiving address with someone
+        who wants to pay you.
+    </p>
+
+    <h2>2. How does a wallet create an address?</h2>
+
+    <p>
+        A Bitcoin wallet uses cryptographic keys and
+        mathematical operations to generate addresses.
+    </p>
+
+    <p>A simplified explanation is:</p>
+
+    <ol class="steps">
+        <li>Your wallet creates or restores the necessary private keys.</li>
+        <li>It derives corresponding public keys.</li>
+        <li>It uses the appropriate Bitcoin address rules to produce an address.</li>
+        <li>You can share that address to receive bitcoin.</li>
+    </ol>
+
+    <div class="lesson-box">
+        <h3 class="orange">Important distinction</h3>
+        <p>
+            Your private key must remain secret.
+            Your receiving address can be shared.
+        </p>
+        <p>
+            Never send your recovery phrase or private key
+            to someone who wants to pay you.
+        </p>
+    </div>
+
+    <h2>3. Different types of Bitcoin addresses</h2>
+
+    <p>
+        Bitcoin has several commonly used address formats.
+        They can look different even though they are all
+        used to receive bitcoin.
+    </p>
+
+    <h3 class="orange">Legacy addresses — start with 1</h3>
+
+    <p>
+        These are older Bitcoin addresses using the
+        original Pay-to-Public-Key-Hash format.
+    </p>
+
+    <p>Example format:</p>
+    <span class="address-example">1ExampleAddressNotForPayment123</span>
+
+    <h3 class="orange">P2SH addresses — start with 3</h3>
+
+    <p>
+        These addresses are used for Pay-to-Script-Hash
+        outputs. They are also commonly associated with
+        wrapped SegWit and other scripts.
+    </p>
+
+    <p>Example format:</p>
+    <span class="address-example">3ExampleAddressNotForPayment123</span>
+
+    <h3 class="orange">Native SegWit addresses — start with bc1q</h3>
+
+    <p>
+        These use the Bech32 format and are commonly
+        used for native SegWit payments.
+    </p>
+
+    <p>Example format:</p>
+    <span class="address-example">bc1qexampleaddressnotforpayment</span>
+
+    <h3 class="orange">Taproot addresses — start with bc1p</h3>
+
+    <p>
+        These use the Bech32m format and support
+        Pay-to-Taproot outputs.
+    </p>
+
+    <p>Example format:</p>
+    <span class="address-example">bc1pexampleaddressnotforpayment</span>
+
+    <div class="example">
+        <strong>Remember:</strong>
+        These are illustrative examples, not real receiving
+        addresses. Always copy an address directly from
+        your own wallet.
+    </div>
+
+    <h2>4. What is a Bitcoin QR code?</h2>
+
+    <p>
+        A QR code is a visual way to represent information
+        such as a Bitcoin address.
+    </p>
+
+    <p>
+        Instead of typing a long address manually, someone
+        can scan your wallet's QR code with a compatible
+        wallet application.
+    </p>
+
+    <div class="example">
+        <strong>Example:</strong>
+        <p>
+            Alice wants to receive bitcoin from Bob.
+            She opens the Receive section of her wallet
+            and displays her Bitcoin QR code.
+        </p>
+        <p>
+            Bob scans it, checks the address and amount,
+            and prepares his payment.
+        </p>
+    </div>
+
+    <p>
+        A QR code makes copying easier, but it does not
+        guarantee that the payment details are correct.
+        Always check the address and payment information.
+    </p>
+
+    <h2>5. Why can a wallet create new addresses?</h2>
+
+    <p>
+        Many Bitcoin wallets can generate multiple
+        receiving addresses from the same wallet backup.
+    </p>
+
+    <p>
+        Using a different address for different payments
+        can make it harder for outside observers to link
+        all your payments together.
+    </p>
+
+    <p>
+        This is one way Bitcoin wallets can help improve
+        financial privacy.
+    </p>
+
+    <div class="example">
+        <strong>Example:</strong>
+        <p>
+            Alice receives one payment using Address A.
+            Later, she receives another payment using
+            Address B.
+        </p>
+        <p>
+            Both addresses may belong to the same wallet,
+            but an outside observer may not immediately
+            know that they are controlled by the same person.
+        </p>
+    </div>
+
+    <p>
+        Address reuse is possible, but using a fresh
+        receiving address when appropriate generally
+        improves privacy.
+    </p>
+
+    <h2>6. How to receive bitcoin safely</h2>
+
+    <ol class="steps">
+        <li>Open your Bitcoin wallet.</li>
+        <li>Select the Receive option.</li>
+        <li>Choose the correct Bitcoin network.</li>
+        <li>Copy the receiving address or display its QR code.</li>
+        <li>Share the receiving information with the sender.</li>
+        <li>Check your wallet or your own node to verify the payment.</li>
+    </ol>
+
+    <p>
+        Bitcoin transactions are generally irreversible
+        once confirmed. Take care when giving someone
+        a receiving address.
+    </p>
+
+    <h2>7. How to protect yourself from address replacement</h2>
+
+    <p>
+        Some malware can monitor your computer's clipboard.
+        When you copy a Bitcoin address, the malware may
+        replace it with another address controlled by
+        an attacker.
+    </p>
+
+    <div class="lesson-box">
+        <h3 class="orange">Before sending bitcoin</h3>
+        <ul>
+            <li>Verify the receiving address using a trusted source.</li>
+            <li>Check the full address, not just its first and last characters.</li>
+            <li>Verify the address on your hardware wallet screen when possible.</li>
+            <li>Make sure the amount is correct.</li>
+            <li>For a large payment, consider sending a small test payment first.</li>
+        </ul>
+    </div>
+
+    <h2>8. Can you use a Bitcoin address to spend bitcoin?</h2>
+
+    <p>
+        No. A receiving address is not enough to spend
+        bitcoin.
+    </p>
+
+    <p>
+        Spending requires a valid transaction authorised
+        by the appropriate private key or spending
+        conditions.
+    </p>
+
+    <p>
+        This is why you should never confuse a public
+        receiving address with a private key.
+    </p>
+
+    <h2>Test your knowledge</h2>
+
+    <div class="quiz">
+
+        <form id="quizForm">
+
+            <div class="question">
+                <strong>1. What is a Bitcoin address used for?</strong>
+                <label><input type="radio" name="q1" value="a"> Receiving bitcoin</label>
+                <label><input type="radio" name="q1" value="b"> Revealing your private key</label>
+                <label><input type="radio" name="q1" value="c"> Mining new bitcoin</label>
+            </div>
+
+            <div class="question">
+                <strong>2. Which information must remain secret?</strong>
+                <label><input type="radio" name="q2" value="a"> Your receiving address</label>
+                <label><input type="radio" name="q2" value="b"> Your private key and recovery phrase</label>
+                <label><input type="radio" name="q2" value="c"> Your public QR code</label>
+            </div>
+
+            <div class="question">
+                <strong>3. Why might a wallet create a new receiving address?</strong>
+                <label><input type="radio" name="q3" value="a"> To increase the Bitcoin supply</label>
+                <label><input type="radio" name="q3" value="b"> To change the blockchain rules</label>
+                <label><input type="radio" name="q3" value="c"> To improve payment privacy</label>
+            </div>
+
+            <div class="question">
+                <strong>4. What should you do before sending bitcoin?</strong>
+                <label><input type="radio" name="q4" value="a"> Check the receiving address carefully</label>
+                <label><input type="radio" name="q4" value="b"> Trust every copied address automatically</label>
+                <label><input type="radio" name="q4" value="c"> Share your recovery phrase</label>
+            </div>
+
+            <button type="button" onclick="checkQuiz()">Check my answers</button>
+
+        </form>
+
+        <p id="result"></p>
+
+    </div>
+
+    <div class="lesson-box">
+        <h2 class="orange">Final thought</h2>
+
+        <p>
+            Bitcoin addresses make it possible to receive
+            bitcoin without revealing your private keys.
+        </p>
+
+        <p>
+            Understanding addresses, QR codes and wallet
+            privacy helps you use Bitcoin more safely.
+        </p>
+
+        <p>
+            Always verify payment details before sending
+            bitcoin. A small mistake can be expensive.
+        </p>
+    </div>
+
+    <p>
+        <a href="index.html" class="orange">← Back to Bitcoin Journey</a>
+    </p>
+
+</main>
+
+<footer>
+    Bitcoin Journey — Learn Bitcoin step by step.
+</footer>
+
+<script>
+    function checkQuiz() {
+
+        const answers = {
+            q1: "a",
+            q2: "b",
+            q3: "c",
+            q4: "a"
+        };
+
+        let score = 0;
+        const total = 4;
+
+        for (let question in answers) {
+
+            const selected = document.querySelector(
+                'input[name="' + question + '"]:checked'
+            );
+
+            if (selected && selected.value === answers[question]) {
+                score++;
+            }
+        }
+
+        const result = document.getElementById("result");
+
+        if (score === total) {
+            result.textContent =
+                "Excellent! You got all 4 answers correct!";
+        } else {
+            result.textContent =
+                "You scored " + score + " out of " + total +
+                ". Review the lesson and try again!";
+        }
+    }
+</script>
+
+</body>
+</html>
