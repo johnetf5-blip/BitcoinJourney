@@ -1,0 +1,509 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bitcoin Halving | Bitcoin Journey</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #0b1220;
+            color: #e8edf5;
+            line-height: 1.7;
+        }
+
+        header {
+            padding: 22px 8%;
+            border-bottom: 1px solid #263247;
+        }
+
+        header a {
+            color: #f7931a;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        main {
+            max-width: 850px;
+            margin: 45px auto;
+            padding: 0 22px;
+        }
+
+        .tag {
+            color: #f7931a;
+            font-weight: bold;
+            letter-spacing: 2px;
+        }
+
+        h1, h2 {
+            color: #ffffff;
+            line-height: 1.3;
+        }
+
+        h1 {
+            font-size: 38px;
+        }
+
+        h2 {
+            margin-top: 35px;
+        }
+
+        .intro, .lesson-box, .quiz {
+            background: #151f30;
+            border: 1px solid #29364b;
+            border-radius: 12px;
+            padding: 22px;
+            margin: 22px 0;
+        }
+
+        .orange {
+            color: #f7931a;
+        }
+
+        .example {
+            background: #202d40;
+            padding: 15px;
+            border-inline-start: 4px solid #f7931a;
+            margin: 18px 0;
+        }
+
+        .timeline-item {
+            border-inline-start: 3px solid #f7931a;
+            padding: 5px 0 18px; padding-inline-start: 20px;
+            margin-inline-start: 8px;
+        }
+
+        .timeline-item strong {
+            color: #f7931a;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 18px 0;
+        }
+
+        th, td {
+            border: 1px solid #344258;
+            padding: 12px;
+            text-align: start;
+        }
+
+        th {
+            color: #f7931a;
+            background: #202d40;
+        }
+
+        button {
+            background: #f7931a;
+            color: #111827;
+            border: none;
+            border-radius: 7px;
+            padding: 12px 20px;
+            font-weight: bold;
+            cursor: pointer;
+            margin-top: 12px;
+        }
+
+        button:hover {
+            background: #ffad42;
+        }
+
+        .question {
+            border-bottom: 1px solid #29364b;
+            padding: 15px 0;
+        }
+
+        .question label {
+            display: block;
+            margin: 8px 0;
+            cursor: pointer;
+        }
+
+        #result {
+            font-weight: bold;
+            margin-top: 18px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 30px;
+            color: #9ba9bd;
+            border-top: 1px solid #263247;
+            margin-top: 50px;
+        }
+
+        @media (max-width: 600px) {
+            h1 {
+                font-size: 30px;
+            }
+
+            main {
+                margin-top: 25px;
+            }
+
+            table {
+                font-size: 14px;
+            }
+
+            th, td {
+                padding: 8px;
+            }
+        }
+    </style>
+<link rel="stylesheet" href="language.css">
+<script src="language.js"></script>
+</head>
+
+<body>
+
+<header>
+    <a href="index.html">← Bitcoin Journey Home</a>
+</header>
+
+<main>
+
+    <p class="tag">BITCOIN EDUCATION — LESSON 7</p>
+
+    <h1>Bitcoin Halving: <span class="orange">Why Does the Block Reward Keep Falling?</span></h1>
+
+    <div class="intro">
+        <p>
+            Bitcoin has a monetary system with a predictable
+            issuance schedule. One important part of that
+            schedule is called the halving.
+        </p>
+        <p>
+            Approximately every four years, the amount of new
+            bitcoin created with each block is cut in half.
+            Let's understand why.
+        </p>
+    </div>
+
+    <h2>1. What is Bitcoin halving?</h2>
+
+    <p>
+        Bitcoin halving is an event where the block subsidy
+        paid to miners is reduced by 50%.
+    </p>
+
+    <p>
+        The block subsidy is the new bitcoin created according
+        to Bitcoin's protocol and included in a miner's block
+        reward.
+    </p>
+
+    <div class="example">
+        <strong>Simple example:</strong>
+        <p>
+            Imagine a miner receives 10 new coins for producing
+            a block. After a halving, the subsidy becomes
+            5 coins. After the next halving, it becomes
+            2.5 coins.
+        </p>
+        <p>
+            Bitcoin follows this same idea, but its actual
+            rewards are measured in bitcoin.
+        </p>
+    </div>
+
+    <h2>2. Why does Bitcoin have halvings?</h2>
+
+    <p>
+        Bitcoin was designed with a limited supply and a
+        predictable issuance schedule.
+    </p>
+
+    <p>
+        Halving gradually reduces the number of new bitcoins
+        entering circulation. This means new supply becomes
+        smaller over time.
+    </p>
+
+    <p>
+        The schedule is part of Bitcoin's protocol rules.
+        It does not depend on a central bank or a government
+        deciding how much new bitcoin to create.
+    </p>
+
+    <h2>3. When does a halving happen?</h2>
+
+    <p>
+        A halving happens every 210,000 blocks.
+        Blocks are produced approximately every ten minutes
+        on average, so 210,000 blocks take roughly four years.
+    </p>
+
+    <p>
+        It is based on the number of blocks, not a fixed
+        calendar date. The exact date of a future halving
+        cannot be known in advance.
+    </p>
+
+    <h2>4. The history of Bitcoin halvings</h2>
+
+    <p>
+        Here is how the block subsidy has changed since
+        Bitcoin began.
+    </p>
+
+    <table>
+        <tr>
+            <th>Year</th>
+            <th>Block subsidy</th>
+        </tr>
+        <tr>
+            <td>2009</td>
+            <td>50 BTC</td>
+        </tr>
+        <tr>
+            <td>2012</td>
+            <td>25 BTC</td>
+        </tr>
+        <tr>
+            <td>2016</td>
+            <td>12.5 BTC</td>
+        </tr>
+        <tr>
+            <td>2020</td>
+            <td>6.25 BTC</td>
+        </tr>
+        <tr>
+            <td>2024</td>
+            <td>3.125 BTC</td>
+        </tr>
+        <tr>
+            <td>Next halving</td>
+            <td>1.5625 BTC</td>
+        </tr>
+    </table>
+
+    <p>
+        The next halving will happen after another 210,000
+        blocks have been produced following the 2024 halving.
+    </p>
+
+    <h2>5. See how the reward gets smaller</h2>
+
+    <div class="lesson-box">
+        <div class="timeline-item">
+            <strong>2009 — 50 BTC</strong>
+            <p>Bitcoin begins with a block subsidy of 50 BTC.</p>
+        </div>
+
+        <div class="timeline-item">
+            <strong>2012 — 25 BTC</strong>
+            <p>The first halving cuts the subsidy in half.</p>
+        </div>
+
+        <div class="timeline-item">
+            <strong>2016 — 12.5 BTC</strong>
+            <p>The second halving reduces it again.</p>
+        </div>
+
+        <div class="timeline-item">
+            <strong>2020 — 6.25 BTC</strong>
+            <p>The third halving takes place.</p>
+        </div>
+
+        <div class="timeline-item">
+            <strong>2024 — 3.125 BTC</strong>
+            <p>The fourth halving reduces the subsidy further.</p>
+        </div>
+
+        <div class="timeline-item">
+            <strong>Next — 1.5625 BTC</strong>
+            <p>The next scheduled halving will reduce it again.</p>
+        </div>
+    </div>
+
+    <h2>6. What happens to miners?</h2>
+
+    <p>
+        Miners use computing power and electricity to compete
+        to produce blocks through Proof of Work.
+    </p>
+
+    <p>
+        Miners can receive two kinds of revenue from a block:
+    </p>
+
+    <ul>
+        <li><strong>Block subsidy:</strong> Newly issued bitcoin, which decreases at each halving.</li>
+        <li><strong>Transaction fees:</strong> Fees attached to transactions included in the block.</li>
+    </ul>
+
+    <p>
+        When the subsidy falls, miners receive fewer newly
+        created bitcoins per block. Transaction fees remain
+        another source of miner revenue.
+    </p>
+
+    <div class="example">
+        <strong>Important:</strong>
+        A halving does not automatically mean every miner
+        becomes unprofitable. Mining economics also depend
+        on fees, bitcoin's market price, electricity costs
+        and mining equipment.
+    </div>
+
+    <h2>7. Does halving guarantee a higher Bitcoin price?</h2>
+
+    <p>
+        No. Halving reduces the rate at which new bitcoin
+        is issued, but it does not guarantee that the
+        market price will increase.
+    </p>
+
+    <p>
+        Bitcoin's market price is influenced by many factors,
+        including demand, market conditions, regulation,
+        investor behaviour and wider economic events.
+    </p>
+
+    <p>
+        Understanding the issuance schedule is different
+        from predicting the future price.
+    </p>
+
+    <h2>8. How does this connect to the 21 million limit?</h2>
+
+    <p>
+        Bitcoin's issuance schedule gradually reduces the
+        block subsidy. Over time, the amount of new bitcoin
+        created becomes smaller and smaller.
+    </p>
+
+    <p>
+        The protocol's schedule approaches a maximum supply
+        of 21 million BTC. Because bitcoin is divided into
+        satoshis and subsidy amounts are rounded down to
+        whole satoshis, the exact amount issued is slightly
+        below 21 million BTC.
+    </p>
+
+    <p>
+        Eventually, the block subsidy will become zero.
+        Miners can still earn transaction fees for including
+        transactions in blocks.
+    </p>
+
+    <h2>Test your knowledge</h2>
+
+    <div class="quiz">
+
+        <form id="quizForm">
+
+            <div class="question">
+                <strong>1. What happens during a Bitcoin halving?</strong>
+                <label><input type="radio" name="q1" value="a"> The block subsidy is cut in half</label>
+                <label><input type="radio" name="q1" value="b"> Bitcoin transactions stop</label>
+                <label><input type="radio" name="q1" value="c"> The maximum supply doubles</label>
+            </div>
+
+            <div class="question">
+                <strong>2. After how many blocks does a halving happen?</strong>
+                <label><input type="radio" name="q2" value="a"> 21,000 blocks</label>
+                <label><input type="radio" name="q2" value="b"> 210,000 blocks</label>
+                <label><input type="radio" name="q2" value="c"> 1 million blocks</label>
+            </div>
+
+            <div class="question">
+                <strong>3. What was the block subsidy after the 2024 halving?</strong>
+                <label><input type="radio" name="q3" value="a"> 12.5 BTC</label>
+                <label><input type="radio" name="q3" value="b"> 6.25 BTC</label>
+                <label><input type="radio" name="q3" value="c"> 3.125 BTC</label>
+            </div>
+
+            <div class="question">
+                <strong>4. Does a halving guarantee a higher Bitcoin price?</strong>
+                <label><input type="radio" name="q4" value="a"> Yes, always</label>
+                <label><input type="radio" name="q4" value="b"> No, market prices depend on many factors</label>
+                <label><input type="radio" name="q4" value="c"> It doubles the price automatically</label>
+            </div>
+
+            <button type="button" onclick="checkQuiz()">Check my answers</button>
+
+        </form>
+
+        <p id="result"></p>
+
+    </div>
+
+    <div class="lesson-box">
+        <h2 class="orange">Final thought</h2>
+
+        <p>
+            Bitcoin halving is one of the most important
+            features of its monetary design.
+        </p>
+
+        <p>
+            Every 210,000 blocks, the creation of new bitcoin
+            is reduced by half. This predictable schedule
+            helps explain how Bitcoin approaches its maximum
+            supply.
+        </p>
+
+        <p>
+            Learn the rules, understand the system and
+            verify the information for yourself.
+        </p>
+    </div>
+
+    <p>
+        <a href="index.html" class="orange">← Back to Bitcoin Journey</a>
+    </p>
+
+</main>
+
+<footer>
+    Bitcoin Journey — Learn Bitcoin step by step.
+</footer>
+
+<script>
+    function checkQuiz() {
+
+        const answers = {
+            q1: "a",
+            q2: "b",
+            q3: "c",
+            q4: "b"
+        };
+
+        let score = 0;
+        const total = 4;
+
+        for (let question in answers) {
+
+            const selected = document.querySelector(
+                'input[name="' + question + '"]:checked'
+            );
+
+            if (selected && selected.value === answers[question]) {
+                score++;
+            }
+        }
+
+        const result = document.getElementById("result");
+
+        if (score === total) {
+            result.textContent =
+                "Excellent! You got all 4 answers correct!";
+        } else {
+            result.textContent =
+                "You scored " + score + " out of " + total +
+                ". Review the lesson and try again!";
+        }
+    }
+</script>
+
+</body>
+</html>
