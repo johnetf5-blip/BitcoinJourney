@@ -144,3 +144,6 @@ html[dir="rtl"] .result strong { unicode-bidi: isolate; }
 
 /* Small orange labels are easier to read in Arabic when slightly larger */
 html[lang="ar"] .eyebrow { font-size: 14px; }
+
+/* Diagram arrows (e.g. the fork diagram) keep their pointing direction */
+html[dir="rtl"] .arrow { direction: ltr; unicode-bidi: isolate; }
