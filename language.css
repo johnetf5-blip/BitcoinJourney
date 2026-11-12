@@ -82,13 +82,13 @@
   transform: translateY(-50%);
 }
 
-/* Pages with no header bar get a slim one */
+/* Pages with no header bar get a slim row, lined up with the lesson box */
 .bj-lang-bar {
   display: flex;
   justify-content: flex-end;
-  padding: 10px 16px;
-  background: #111c30;
-  border-bottom: 1px solid #26354d;
+  max-width: 850px;
+  margin: 0 auto 14px;
+  padding: 0;
 }
 
 /* Hide the page for a split second while Arabic loads (prevents English flash) */
