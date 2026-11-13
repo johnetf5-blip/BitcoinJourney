@@ -432,7 +432,7 @@ nav a {
     padding: 25px;
     background: linear-gradient(145deg, var(--panel), var(--panel2));
     border: 1px solid var(--border);
-    border-inline-start: 3px solid var(--orange);
+    border-left: 3px solid var(--orange);
     border-radius: 12px;
 }
 .start-path h3 { margin: 5px 0 6px; font-size: 21px; }
@@ -538,75 +538,7 @@ nav a {
 </section>
 
 <main>
-    <section id="tools">
-        <div class="section-heading">
-            <div class="eyebrow">Free educational tools</div>
-            <h2>Make the numbers easier to understand.</h2>
-            <p>Enter your own figures. Your calculations happen in your browser.</p>
-        </div>
-
-        <div class="tools">
-
-            <article class="card">
-                <div class="icon" aria-hidden="true">▦</div>
-                <h3>Bitcoin Savings Calculator</h3>
-                <p class="card-intro">Estimate hypothetical Bitcoin accumulation at a price you choose.</p>
-
-                <form id="bitcoinForm">
-                    <label for="amount">Weekly investment (£)</label>
-                    <input id="amount" type="number" value="15" min="0" max="1000000000" step="0.01" required>
-
-                    <label for="weeks">Number of weeks</label>
-                    <input id="weeks" type="number" value="52" min="1" max="5200" step="1" required>
-
-                    <label for="price">Assumed Bitcoin price (£)</label>
-                    <input id="price" type="number" value="80000" min="0.01" max="1000000000" step="0.01" required>
-
-                    <button class="button" type="submit">Calculate Bitcoin</button>
-                </form>
-
-                <div class="result" id="result" aria-live="polite">
-                    Your calculation will appear here.
-                </div>
-                <p class="note">Assumes a constant purchase price. Excludes fees, taxes and price changes.</p>
-            </article>
-
-            <article class="card">
-                <div class="icon" aria-hidden="true">₿</div>
-                <h3>Satoshi Converter</h3>
-                <p class="card-intro">Understand the small units that make up one Bitcoin.</p>
-
-                <form id="satoshiForm">
-                    <label for="btc">Bitcoin amount (BTC)</label>
-                    <input id="btc" type="number" value="0.01" min="0" max="21000000" step="any" required>
-                    <button class="button" type="submit">Convert to Satoshis</button>
-                </form>
-
-                <div class="result" id="satoshiResult" aria-live="polite">
-                    Your conversion will appear here.
-                </div>
-                <p class="note">1 BTC = 100,000,000 satoshis. Bitcoin is divisible into 100 million units per BTC.</p>
-            </article>
-
-            <article class="card">
-                <div class="icon" aria-hidden="true">↗</div>
-                <h3>Your Savings Plan</h3>
-                <p class="card-intro">See how regular savings add up over time, without assuming investment returns.</p>
-
-                <form id="savingsForm">
-                    <label for="monthly">Monthly savings (£)</label>
-                    <input id="monthly" type="number" value="60" min="0" max="1000000000" step="0.01" required>
-                    <button class="button" type="submit">Calculate My Plan</button>
-                </form>
-
-                <div class="result" id="savingsResult" aria-live="polite">
-                    Your savings plan will appear here.
-                </div>
-                <p class="note">These figures show contributions only, not investment growth.</p>
-            </article>
-
-        </div>
-    </section>
+    
 
     <section id="learn" style="margin-top:50px">
         <div class="section-heading">
@@ -771,6 +703,76 @@ nav a {
 </div>
 </div>
 </section>
+
+    <section id="tools">
+        <div class="section-heading">
+            <div class="eyebrow">Free educational tools</div>
+            <h2>Make the numbers easier to understand.</h2>
+            <p>Enter your own figures. Your calculations happen in your browser.</p>
+        </div>
+
+        <div class="tools">
+
+            <article class="card">
+                <div class="icon" aria-hidden="true">▦</div>
+                <h3>Bitcoin Savings Calculator</h3>
+                <p class="card-intro">Estimate hypothetical Bitcoin accumulation at a price you choose.</p>
+
+                <form id="bitcoinForm">
+                    <label for="amount">Weekly investment (£)</label>
+                    <input id="amount" type="number" value="15" min="0" max="1000000000" step="0.01" required>
+
+                    <label for="weeks">Number of weeks</label>
+                    <input id="weeks" type="number" value="52" min="1" max="5200" step="1" required>
+
+                    <label for="price">Assumed Bitcoin price (£)</label>
+                    <input id="price" type="number" value="80000" min="0.01" max="1000000000" step="0.01" required>
+
+                    <button class="button" type="submit">Calculate Bitcoin</button>
+                </form>
+
+                <div class="result" id="result" aria-live="polite">
+                    Your calculation will appear here.
+                </div>
+                <p class="note">Assumes a constant purchase price. Excludes fees, taxes and price changes.</p>
+            </article>
+
+            <article class="card">
+                <div class="icon" aria-hidden="true">₿</div>
+                <h3>Satoshi Converter</h3>
+                <p class="card-intro">Understand the small units that make up one Bitcoin.</p>
+
+                <form id="satoshiForm">
+                    <label for="btc">Bitcoin amount (BTC)</label>
+                    <input id="btc" type="number" value="0.01" min="0" max="21000000" step="any" required>
+                    <button class="button" type="submit">Convert to Satoshis</button>
+                </form>
+
+                <div class="result" id="satoshiResult" aria-live="polite">
+                    Your conversion will appear here.
+                </div>
+                <p class="note">1 BTC = 100,000,000 satoshis. Bitcoin is divisible into 100 million units per BTC.</p>
+            </article>
+
+            <article class="card">
+                <div class="icon" aria-hidden="true">↗</div>
+                <h3>Your Savings Plan</h3>
+                <p class="card-intro">See how regular savings add up over time, without assuming investment returns.</p>
+
+                <form id="savingsForm">
+                    <label for="monthly">Monthly savings (£)</label>
+                    <input id="monthly" type="number" value="60" min="0" max="1000000000" step="0.01" required>
+                    <button class="button" type="submit">Calculate My Plan</button>
+                </form>
+
+                <div class="result" id="savingsResult" aria-live="polite">
+                    Your savings plan will appear here.
+                </div>
+                <p class="note">These figures show contributions only, not investment growth.</p>
+            </article>
+
+        </div>
+    </section>
 <section class="support-section" id="support">
 
     <h2>Support Bitcoin Journey 🟠</h2>
@@ -790,7 +792,7 @@ nav a {
 
             <div class="support-qr" id="lightning-qr"></div>
 
-            <div class="support-address" id="lightning-address" data-no-translate>
+            <div class="support-address" id="lightning-address">
                 lno1pgqppmsrse80qf0aara4slvcjxrvu6j2rp5ftmjy4yntlsmsutpkvkt6878s8ne35ujdwlezuxr60wwzerywyhvhgq3x5waqwp57tfrw7qrquk35qgpvvktwpkmqf30flqh99j8v5u4ju8m6nsdyz4a7nk0egqyet70mj7cqxdgtmk9xf3yenh4jnjpgvjdftp34xh5568a2w9fkqylhsravl33vv9mw3pqn2z8cuyd0pc8j9csjywkkavnqxztaahvft67qmm5l697mhn9zjammjepwuggl2wd8y9qmqhrayfwuqqexv9cm26358u2preg6gcmeszg00dlxwfjqltmfcjuxg7x4cwkdaj6uxk8sw83nygtmnx54raypeygscacq
             </div>
 
@@ -809,7 +811,7 @@ nav a {
 
             <div class="support-qr" id="onchain-qr"></div>
 
-            <div class="support-address" id="onchain-address" data-no-translate>
+            <div class="support-address" id="onchain-address">
                 bc1px6gpkldgt5gmqhjls4qdlwn637mv7nx0e7ae5398j4rp9jg036lsrp39rn
             </div>
 
@@ -860,9 +862,9 @@ function copyPayment(elementId) {
     const text = document.getElementById(elementId).textContent.trim();
 
     navigator.clipboard.writeText(text).then(() => {
-        alert(window.BJ ? BJ.t("Payment details copied!") : "Payment details copied!");
+        alert("Payment details copied!");
     }).catch(() => {
-        alert(window.BJ ? BJ.t("Copy failed. Please select and copy the address manually.") : "Copy failed. Please select and copy the address manually.");
+        alert("Copy failed. Please select and copy the address manually.");
     });
 }
 </script>
@@ -920,9 +922,7 @@ function addResultLine(parent, label, value) {
     const p = document.createElement("p");
     const strong = document.createElement("strong");
     strong.textContent = label + ": ";
-    const valueEl = document.createElement("bdi");
-valueEl.textContent = value;
-p.append(strong, valueEl);
+    p.append(strong, document.createTextNode(value));
     parent.appendChild(p);
 }
 
