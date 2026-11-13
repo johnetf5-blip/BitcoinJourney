@@ -17,19 +17,11 @@ window.BJ_LANG_DATA.ar = {
     "Start lesson →": "ابدأ الدرس ←",
 
     // ----- Homepage (index.html): page title, menu and introduction -----
-    "Bitcoin Journey | Learn. Calculate. Understand.": "Bitcoin Journey | تعلّم. احسب. افهم.",
-    "Free Bitcoin calculators and educational tools. Explore Bitcoin savings, satoshis and long-term savings plans.": "حاسبات بيتكوين مجانية وأدوات تعليمية. استكشف مدخرات البيتكوين والساتوشي (Satoshis) وخطط الادخار طويلة الأجل.",
     "Main navigation": "القائمة الرئيسية",
     "Home": "الرئيسية",
     "Tools": "الأدوات",
-    "Learn": "تعلّم",
     "Support": "الدعم",
     "About": "عن المشروع",
-    "Your Bitcoin learning companion": "رفيقك في تعلّم البيتكوين",
-    "Understand Bitcoin.<br><span class=\"orange\">One step at a time.</span>": "افهم البيتكوين.<br><span class=\"orange\">خطوة بعد خطوة.</span>",
-    "Explore free calculators, understand satoshis, and plan your savings with clear, beginner-friendly tools.": "استكشف أدوات مجانية، وافهم الساتوشي (Satoshi)، وخطّط لمدخراتك باستخدام أدوات واضحة ومناسبة للمبتدئين.",
-    "Bitcoin is more than digital money. It is a new way to understand money, ownership and financial freedom. Start learning at your own pace, explore the technology, and share what you discover with others.": "البيتكوين أكثر من مجرد نقود رقمية. إنه طريقة جديدة لفهم المال والملكية والحرية المالية. ابدأ التعلّم بالسرعة التي تناسبك، واستكشف التقنية، وشارك ما تكتشفه مع الآخرين.",
-    "Explore the tools ↓": "استكشف الأدوات ↓",
     "Bitcoin symbol": "رمز البيتكوين",
 
     // ----- Homepage: calculators -----
@@ -70,12 +62,6 @@ window.BJ_LANG_DATA.ar = {
     "New to Bitcoin? Follow these three beginner lessons in order. Learn at your own pace.": "جديد على البيتكوين؟ اتبع هذه الدروس الثلاثة للمبتدئين بالترتيب. تعلّم بالسرعة التي تناسبك.",
     "Why 21 Million?": "لماذا 21 مليونًا؟",
     "Self-custody": "الحفظ الذاتي (Self-custody)",
-    "Understand Bitcoin, digital money, decentralisation and how the network works.": "افهم البيتكوين والنقود الرقمية واللامركزية (Decentralisation) وكيف تعمل الشبكة.",
-    "Start Lesson 1 →": "ابدأ الدرس 1 ←",
-    "Discover Bitcoin's maximum supply, mining and the halving schedule.": "اكتشف الحد الأقصى لعرض البيتكوين (Maximum supply) والتعدين وجدول التنصيف (Halving).",
-    "Start Lesson 2 →": "ابدأ الدرس 2 ←",
-    "Explore how wallets and private keys work, and why recovery phrases must stay secret.": "تعرّف على كيفية عمل المحافظ (Wallets) والمفاتيح الخاصة (Private keys)، ولماذا يجب أن تبقى عبارات الاسترداد (Recovery phrases) سرّية.",
-    "Start Lesson 3 →": "ابدأ الدرس 3 ←",
     "How Bitcoin Mining Works": "كيف يعمل تعدين البيتكوين (Mining)",
     "Discover Proof of Work, miners, block rewards and how mining helps secure Bitcoin.": "اكتشف إثبات العمل (Proof of Work) والمعدِّنين (Miners) ومكافآت الكتل (Block rewards) وكيف يساعد التعدين في تأمين البيتكوين.",
     "Start Lesson 4 →": "ابدأ الدرس 4 ←",
@@ -147,6 +133,7 @@ window.BJ_LANG_DATA.ar = {
 
     // ----- Lesson 1 (bitcoin-basics.html) -----
     "What Is Bitcoin? | Bitcoin Journey": "ما هو البيتكوين؟ | Bitcoin Journey",
+    "Learn what Bitcoin is, how it works, and why it matters in this beginner-friendly Bitcoin lesson.": "تعرّف على ما هو البيتكوين، وكيف يعمل، ولماذا هو مهم، في هذا الدرس المناسب للمبتدئين.",
     "← Back to Bitcoin Journey": "→ العودة إلى Bitcoin Journey",
     "BITCOIN JOURNEY · BEGINNER COURSE · LESSON 1": "رحلة بيتكوين · دورة المبتدئين · الدرس 1",
     "Imagine being able to send money to someone in another country without asking a bank to approve the transaction. Bitcoin was designed to make this possible using a network of computers.": "تخيّل أنك تستطيع إرسال المال إلى شخص في بلد آخر دون أن تطلب من بنك الموافقة على المعاملة. صُمّم البيتكوين لجعل ذلك ممكنًا باستخدام شبكة من الحواسيب.",
@@ -1675,6 +1662,20 @@ window.BJ_LANG_DATA.ar = {
     "Only by buying Bitcoin.": "فقط بشراء البيتكوين.",
     "By writing, testing, reviewing code and documentation.": "بكتابة الشيفرة واختبارها ومراجعتها وكتابة التوثيق.",
     "Only by becoming miners.": "فقط بأن يصبحوا معدِّنين.",
+
+    // ----- Homepage update: new title, hero, statistics and lessons heading -----
+    "Bitcoin Journey – Learn Bitcoin Step by Step": "Bitcoin Journey – تعلّم البيتكوين خطوة بخطوة",
+    "Learn Bitcoin from beginner to advanced with 20 free lessons, Bitcoin calculators and simple explanations of money, mining, self-custody and the Bitcoin network.": "تعلّم البيتكوين من المستوى المبتدئ إلى المتقدم عبر 20 درسًا مجانيًا، وحاسبات بيتكوين، وشروحات مبسّطة عن المال والتعدين والحفظ الذاتي وشبكة البيتكوين.",
+    "Start Learning": "ابدأ التعلّم",
+    "FREE BITCOIN EDUCATION · BEGINNER TO ADVANCED": "تعليم بيتكوين مجاني · من المبتدئ إلى المتقدم",
+    "Discover Bitcoin.<br><span class=\"orange\">Understand Your Money.</span>": "اكتشف البيتكوين.<br><span class=\"orange\">افهم أموالك.</span>",
+    "Learn how money works, why Bitcoin is different, and how a decentralised financial system can give people greater control over their money. Start with the basics and build your knowledge one lesson at a time.": "تعلّم كيف يعمل المال، ولماذا يختلف البيتكوين، وكيف يمكن لنظام مالي لامركزي (Decentralised) أن يمنح الناس تحكمًا أكبر في أموالهم. ابدأ بالأساسيات وابنِ معرفتك درسًا بعد درس.",
+    "Start Learning ↓": "ابدأ التعلّم ↓",
+    "Bitcoin Lessons": "دروس بيتكوين",
+    "Free Calculators": "حاسبات مجانية",
+    "Free Education": "تعليم مجاني",
+    "Explore All 20 Bitcoin Lessons": "استكشف جميع دروس البيتكوين العشرين",
+    "Continue learning step by step, from the fundamentals to more advanced Bitcoin concepts.": "واصل التعلّم خطوة بخطوة، من الأساسيات إلى مفاهيم البيتكوين الأكثر تقدمًا.",
 
     // ----- Messages that appear after an action (quizzes, pop-ups, input errors) -----
     "Payment details copied!": "تم نسخ بيانات الدفع!",
